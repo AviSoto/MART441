@@ -4,6 +4,40 @@
   <head>
 
 <style media="screen">
+    * {
+    box-sizing: border-box;
+  }
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
+    }
+
+  .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   body {
 background-color: #186725;
 text-align: center;
@@ -13,10 +47,7 @@ background-color: white;
 width: 350px;
 padding: 20px;
 border: 2px solid black;
-@media (min-width: 380px) {
-    float: left;
-    width:33.33%
-}
+margin:auto;
 }
 .section p, pre {
 text-align: center;
@@ -37,13 +68,13 @@ font-family: Arial;
   </head>
 
   <body>
-<div class="main">
-<div class="container">
+<div class="row">
+<div class="container col">
   <h1>Avianna Soto</h1>
 <img src="images/Profile-Green.jpg" alt="Portrait of Author Avianna Soto" width="500" height="700" title= "Butterfly Portrait">
 </div>
 
-<div id="about"class="container section">
+<div id="about"class="container section col">
     <h1>About</h1>
 
 <p>
@@ -54,7 +85,7 @@ font-family: Arial;
 
 </div>
 
-<div id="about"class="container section">
+<div id="about"class="container section col">
     <h1>Interests</h1>
 
 <p>
