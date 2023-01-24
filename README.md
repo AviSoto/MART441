@@ -1,2 +1,2 @@
 # MART441
-Web Technologies (Sect: 50, 33333, Spring 2022) assignments
+Web Technologies (Sect: 50, 32727, Spring 2023) assignments
