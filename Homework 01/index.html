@@ -42,6 +42,20 @@
 background-color: #186725;
 text-align: center;
 }
+
+.about-image {
+    content:url("../images/Profile-Green-Small.jpg");
+    margin: auto;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .about-image{
+        content:url("../images/Profile-Green.jpg");
+        margin-left: 30px;
+    }
+}
+
 .container {
 background-color: white;
 padding: 20px;
@@ -71,7 +85,9 @@ font-family: Arial;
 <div class="row">
 <div class="container col-4">
   <h1>Avianna Soto</h1>
-<img src="images/Profile-Green.jpg" alt="Portrait of Author Avianna Soto" width="300" height="500" title= "Butterfly Portrait">
+<div class="about-image">
+</div>
+
 </div>
 
 <div id="about"class="container section col-4">
