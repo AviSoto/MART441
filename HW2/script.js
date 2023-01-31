@@ -1,3 +1,22 @@
 // Author: Avianna Soto
 
-console.log("My favorite websites are Instagram, Dribble, and Discord.");
+/*
+Favorite Websites:
+https://www.instagram.com/
+https://www.dribble.com/
+https://www.discord.com/
+*/
+
+/*
+Favorite Games:
+The Last of Us Part II
+Life is Strange
+Dead by Daylight
+*/
+
+/*
+Favorite Artists:
+Frida Kahlo
+*/
+
+console.log("JavaScript Rules!");
