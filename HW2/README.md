@@ -1,0 +1,1 @@
+Since I have some experience with JS, this week went pretty smooth. I was a little confused with the console.log but after researching outside of the course materials, I was able to have a better understanding. I look forward to advancing my skills in the future!
