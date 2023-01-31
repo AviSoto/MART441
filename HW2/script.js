@@ -1,4 +1,4 @@
 
 // Author: Avianna Soto
 
-console.log("Testing this"); 
+console.log("Make some changes and see what happens!");
