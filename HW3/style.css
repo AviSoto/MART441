@@ -1,5 +1,5 @@
 body {
-    background-color: #a6f6fc;
+    background-color: #f59953;
     font-family: 'Helvetica', sans-serif;
   }
   .center {
@@ -16,7 +16,7 @@ body {
   }
 
   div {
-    position: relative;
+    position: center;
     text-align: center;
   }
   
