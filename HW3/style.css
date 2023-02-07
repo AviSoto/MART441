@@ -1,5 +1,5 @@
 body {
-    background-color: #f7acf8;
+    background-color: #f1cb80;
     font-family: 'Helvetica', sans-serif;
   }
   
@@ -8,33 +8,9 @@ body {
     font-family: 'Courier New', monospace;
     position: relative;
     text-align: center;
-    opacity: 60%;
-    color: #7888f1;
-  }
-  
-  .main-container {
-    width: 75%;
-    margin: auto;
-  }
-  
-  .secondary-container {
-    width: 50%;
-    margin: auto;
-    background: #f8e084;
-    border-style: dashed;
-    border-width: 5px;
-    padding: 30px;
-    border-color: #7888f1;
   }
   
   p {
     font-size: 20px;
     text-align: center;
-    color: #e918ed;
-  }
-  
-  #divider {
-    position: relative;
-  
-    left: 200px;
   }
