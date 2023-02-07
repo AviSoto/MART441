@@ -30,7 +30,7 @@
             document.getElementById("choice1").innerHTML = "Restart";
             document.getElementById("choice2").innerHTML = "Quit";
         } else if (choice == 2 && answer2 == "Ask him if he wants to be friends") {
-            document.getElementById("story").innerHTML = "The capybara is confused. He walks away." + "<br>Restart?";
+            document.getElementById("story").innerHTML = "The capybara is confused. He does not speak english. He walks away." + "<br>Restart?";
             document.getElementById("choice1").innerHTML = "Restart";
             document.getElementById("choice2").innerHTML = "Quit";
         } else if (choice == 1 && answer1 == "Give him an orange") {
