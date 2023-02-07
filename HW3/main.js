@@ -6,7 +6,7 @@
             document.getElementById("choice1").innerHTML = "Smile at him";
             document.getElementById("choice2").innerHTML = "Take a picture";
         } else if (choice == 2 && answer2 == "Run away") {
-            document.getElementById("story").innerHTML = "You run away from the capybara. You look back at him and he is chasing you. What do you do";
+            document.getElementById("story").innerHTML = "You run away from the capybara. You look back at him and he is chasing you. What do you do?";
             document.getElementById("choice1").innerHTML = "Stop running and face him";
             document.getElementById("choice2").innerHTML = "Keep running away";
         } else if (choice == 1 && answer1 == "Smile at him") {
