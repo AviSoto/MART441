@@ -1,7 +1,7 @@
 function storyFunction(choice) {
     var answer1 = document.getElementById("choice1").innerHTML;
     var answer2 = document.getElementById("choice2").innerHTML;
-    if (choice == 3 && answer1 == "Approach") {
+    if (choice == 1 && answer1 == "Approach") {
         document.getElementById("story").innerHTML = "You walk up to the capybara. He looks at you. What do you do?";
         document.getElementById("choice1").innerHTML = "Smile at him";
         document.getElementById("choice2").innerHTML = "Take a picture";
@@ -19,7 +19,7 @@ function storyFunction(choice) {
         document.getElementById("choice2").innerHTML = "Get a drink";
 
     }
-    else if (choice == 3 && answer2 == "Run Away") {
+    else if (choice == 2 && answer2 == "Run Away") {
         document.getElementById("story").innerHTML = "You run back to your office in a cold sweat. You have escaped.. this time." + "<br>Restart?";
         document.getElementById("choice1").innerHTML = "Restart";
         document.getElementById("choice2").innerHTML = "Quit";
