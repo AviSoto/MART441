@@ -15,12 +15,7 @@ body {
     text-align: center;
   }
 
-  #story {
-    position: relative;
-    text-align: center;
-  }
-
-  button {
+  div {
     position: relative;
     text-align: center;
   }
