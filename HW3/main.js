@@ -1,48 +1,72 @@
-function storyFunction(choice) {
-    var answer1 = document.getElementById("choice1").innerHTML;
-    var answer2 = document.getElementById("choice2").innerHTML;
-    var answer3 = document.getElementById("choice3").innerHTML;
-    var answer4 = document.getElementById("choice4").innerHTML;
-    var answer5 = document.getElementById("choice5").innerHTML;
-    var answer6 = document.getElementById("choice6").innerHTML;
-    var answer7 = document.getElementById("choice7").innerHTML;
-    var answer8 = document.getElementById("choice8").innerHTML;
-    var answer9 = document.getElementById("choice9").innerHTML;
-    var answer10 = document.getElementById("choice10").innerHTML;
-
+    function storyFunction(choice) {
+        var answer1 = document.getElementById("choice1").innerHTML;
+        var answer2 = document.getElementById("choice2").innerHTML;
+        if (choice == 1 && answer1 == "Approach") {
+            document.getElementById("story").innerHTML = "Pugster continues into the park with confidence. Pugster meets another dog. What Pugster do now?";
+            document.getElementById("choice1").innerHTML = "Meet others";
+            document.getElementById("choice2").innerHTML = "Walk alone";
+        } else if (choice == 2 && answer2 == "Run") {
+            document.getElementById("story").innerHTML = "Pugster starts to back out, but then something in the back of Pugster's mind says 'Wait!'";
+            document.getElementById("choice1").innerHTML = "Go ahead and be brave";
+            document.getElementById("choice2").innerHTML = "Scan the situation";
+        } else if (choice == 1 && answer1 == "Meet others") {
+            document.getElementById("story").innerHTML = "Pugster walks over to a group of dogs and says hello.  Pugster is trying to decide who is genuine or not.";
+            document.getElementById("choice1").innerHTML = "Evaluate all dogs";
+            document.getElementById("choice2").innerHTML = "Stay clear";
+        } else if (choice == 2 && answer2 == "Walk alone") {
+            document.getElementById("story").innerHTML = "Pugster starts to walk over to the dogs and then decides to go to the water instead.  Now what?'";
+            document.getElementById("choice1").innerHTML = "Go for a swim";
+            document.getElementById("choice2").innerHTML = "Get a drink";
+        } else if (choice == 1 && answer1 == "Go ahead and be brave") {
+            document.getElementById("story").innerHTML = "Pugster decides to go in even with hesitation to make new friends.  Will it work?'";
+            document.getElementById("choice1").innerHTML = "Yes it will work";
+            document.getElementById("choice2").innerHTML = "No it will not work";
+        } else if (choice == 2 && answer2 == "Scan the situation") {
+            document.getElementById("story").innerHTML = "Pugster decides to just look around for the moment. What should Pugster do now?";
+            document.getElementById("choice1").innerHTML = "Watch from afar";
+            document.getElementById("choice2").innerHTML = "Get in closer";
+        }
+        // need to do these
+        else if (choice == 1 && answer1 == "Evaluate all dogs") {
+            document.getElementById("story").innerHTML = "Pugster decides that evaluation is the best option." + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Yes restart";
+            document.getElementById("choice2").innerHTML = "No quit";
+        } else if (choice == 2 && answer2 == "Stay clear") {
+            document.getElementById("story").innerHTML = "Pugster decides staying away is the best option" + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 1 && answer1 == "Go for a swim") {
+            document.getElementById("story").innerHTML = "Pugster decides that swimming sounds most fun" + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 2 && answer2 == "Get a drink") {
+            document.getElementById("story").innerHTML = "Pugster decides it's time to drink" + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 1 && answer1 == "Yes it will work") {
+            document.getElementById("story").innerHTML = "Pugster thinks, yeah this will work out." + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 2 && answer2 == "No it will not work") {
+            document.getElementById("story").innerHTML = "Pugster thinks, I don't think this will work out." + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 1 && answer1 == "Watch from afar") {
+            document.getElementById("story").innerHTML = "Pugster decides it's time to just watch from a distance for safety." + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 2 && answer2 == "Get in closer") {
+            document.getElementById("story").innerHTML = "Pugster decides to get just a little closer, but not engage." + "<br>Restart?";
+            document.getElementById("choice1").innerHTML = "Restart";
+            document.getElementById("choice2").innerHTML = "Quit";
+        } else if (choice == 1 && answer1 == "Yes restart") {
+            document.getElementById("story").innerHTML = "Our fearless leader, 'Pugster' has entered the dog park for the first time. Scared? Yes, but willing to give it a try. Are you ready to start on adventure with Pugster?";
+            document.getElementById("choice1").innerHTML = "Yes";
+            document.getElementById("choice2").innerHTML = "No";
+        } else if (choice == 2 && answer2 == "No quit") {
+            document.getElementById("story").innerHTML = "Pugster thanks you!";
     
-    if (choice == 1 && answer1 == "Approach") {
-        document.getElementById("storyFunction(1)").innerHTML = "You walk up to the capybara. He looks at you. What do you do?";
-        document.getElementById("choice3").innerHTML = "Smile at him";
-        document.getElementById("choice4").innerHTML = "Take a picture";
-    } if (choice == 3 && answer3 == "Smile at him") {
-        document.getElementById("storyFunction(3)").innerHTML = "You give him a big old cheesy smile. He smiles back at you. What is your next step?";
-        document.getElementById("choice5").innerHTML = "Give him your orange from your lunch";
-        document.getElementById("choice6").innerHTML = "Scratch his chin";
-    } if (choice == 5 && answer5 == "Give him your orange from your lunch") {
-        document.getElementById("storyFunction(5)").innerHTML = "How did you know this is his favorite food? He eats it whole. What is your next move?";
-        document.getElementById("choice7").innerHTML = "Scratch his belly";
-        document.getElementById("choice8").innerHTML = "Offer him your tuna sandwich";
-    } if (choice == 6 && answer7 == "Scratch his belly") {
-        document.getElementById("storyFunction(7)").innerHTML = "The capybara loves getting his chin scratched after having a snack. The two of you become best friends.";
-        document.getElementById("choice9").innerHTML = "Go for a swim";
-        document.getElementById("choice10").innerHTML = "Get a drink";
-
-    }
-    else if (choice == 2 && answer2 == "Run Away") {
-        document.getElementById("storyFunction(2)").innerHTML = "You run back to your office in a cold sweat. You have escaped.. this time." + "<br>Restart?";
-        document.getElementById("choice9").innerHTML = "Restart";
-        document.getElementById("choice10").innerHTML = "Quit";
-    } else if (choice == 4 && answer4 == "Take a picture") {
-        document.getElementById("storyFunction(4)").innerHTML = "The capybara hates getting his picture taken. He runs away." + "<br>Restart?";
-        document.getElementById("choice9").innerHTML = "Restart";
-        document.getElementById("choice10").innerHTML = "Quit";
-    } else if (choice == 5 && answer6 == "Scratch his chin") {
-        document.getElementById("storyFunction(6)").innerHTML = "He bites your hand and runs away." + "<br>Restart?";
-        document.getElementById("choice9").innerHTML = "Restart";
-        document.getElementById("choice10").innerHTML = "Quit";
-    } else if (choice == 6 && answer8 == "Offer him your tuna sandwich") {
-        document.getElementById("storyFunction(8)").innerHTML = "He stopped eating fish last year. He glares at you and walks away." + "<br>Restart?";
-        document.getElementById("choice9").innerHTML = "Restart";
-        document.getElementById("choice10").innerHTML = "Quit";
+        }
+    
+    
     }
