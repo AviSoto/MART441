@@ -2,7 +2,11 @@ body {
     background-color: #f1cb80;
     font-family: 'Helvetica', sans-serif;
   }
+  img {
+    padding: 10px;
+    align-self: center;
   
+  }
   h1 {
     font-size: 60px;
     font-family: 'Courier New', monospace;
