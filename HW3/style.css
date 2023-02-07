@@ -2,10 +2,11 @@ body {
     background-color: #a07c39;
     font-family: 'Helvetica', sans-serif;
   }
-  img {
-    padding: 10px;
-    display: inline-block;
-  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
   h1 {
     font-size: 30px;
