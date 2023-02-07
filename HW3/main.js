@@ -26,7 +26,6 @@
             document.getElementById("choice1").innerHTML = "Watch from afar";
             document.getElementById("choice2").innerHTML = "Get in closer";
         }
-        // need to do these
         else if (choice == 1 && answer1 == "Evaluate all dogs") {
             document.getElementById("story").innerHTML = "Pugster decides that evaluation is the best option." + "<br>Restart?";
             document.getElementById("choice1").innerHTML = "Yes restart";
@@ -64,7 +63,7 @@
             document.getElementById("choice1").innerHTML = "Yes";
             document.getElementById("choice2").innerHTML = "No";
         } else if (choice == 2 && answer2 == "No quit") {
-            document.getElementById("story").innerHTML = "Pugster thanks you!";
+            document.getElementById("story").innerHTML = "Better luck next time!";
     
         }
     
