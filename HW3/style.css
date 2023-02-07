@@ -19,6 +19,7 @@ body {
   div {
     position: relative;
     text-align: center;
+    background-color: aliceblue;
   }
   
   p {
