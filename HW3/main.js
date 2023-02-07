@@ -28,27 +28,11 @@ function storyFunction(choice) {
         document.getElementById("choice1").innerHTML = "Restart";
         document.getElementById("choice2").innerHTML = "Quit";
     } else if (choice == 1 && answer1 == "Scratch his chin") {
-        document.getElementById("story").innerHTML = "Pugster decides that swimming sounds most fun" + "<br>Restart?";
+        document.getElementById("story").innerHTML = "He bites your hand and runs away." + "<br>Restart?";
         document.getElementById("choice1").innerHTML = "Yes restart";
         document.getElementById("choice2").innerHTML = "No quit";
     } else if (choice == 2 && answer2 == "Offer him your tuna sandwich") {
-        document.getElementById("story").innerHTML = "Pugster decides it's time to drink" + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 1 && answer1 == "Yes it will work") {
-        document.getElementById("story").innerHTML = "Pugster thinks, yeah this will work out." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 2 && answer2 == "No it will not work") {
-        document.getElementById("story").innerHTML = "Pugster thinks, I don't think this will work out." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 1 && answer1 == "Watch from afar") {
-        document.getElementById("story").innerHTML = "Pugster decides it's time to just watch from a distance for safety." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-    } else if (choice == 2 && answer2 == "Get in closer") {
-        document.getElementById("story").innerHTML = "Pugster decides to get just a little closer, but not engage." + "<br>Restart?";
+        document.getElementById("story").innerHTML = "He stopped eating fish last year. He glares at you and walks away." + "<br>Restart?";
         document.getElementById("choice1").innerHTML = "Yes restart";
         document.getElementById("choice2").innerHTML = "No quit";
     } else if (choice == 1 && answer1 == "Yes restart") {
