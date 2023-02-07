@@ -44,7 +44,7 @@
         } else if (choice == 1 && answer1 == "Restart") {
             document.getElementById("story").innerHTML = "Its a beautiful Saturday afternoon. You are on your work break in Waco, TX. Suddenly you see your favorite animal, the capybara, appears. What do you do next?";
             document.getElementById("choice1").innerHTML = "Approach";
-            document.getElementById("choice2").innerHTML = "Run Away";
+            document.getElementById("choice2").innerHTML = "Run away";
         } else if (choice == 2 && answer2 == "Quit") {
             document.getElementById("story").innerHTML = "Better luck next time!";
     
