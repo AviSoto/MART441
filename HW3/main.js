@@ -42,18 +42,7 @@ function storyFunction(choice) {
         document.getElementById("story").innerHTML = "He stopped eating fish last year. He glares at you and walks away." + "<br>Restart?";
         document.getElementById("choice1").innerHTML = "Yes restart";
         document.getElementById("choice2").innerHTML = "No quit";
-    
-    
-    
-    
-    } else if (choice ==  && answer1 == "Restart") {
-        document.getElementById("story").innerHTML = "Our fearless leader, 'Pugster' has entered the dog park for the first time. Scared? Yes, but willing to give it a try. Are you ready to start on adventure with Pugster?";
-        document.getElementById("choice1").innerHTML = "Yes";
-        document.getElementById("choice2").innerHTML = "No";
-    } else if (choice == 2 && answer2 == "Quit") {
-        document.getElementById("story").innerHTML = "Pugster thanks you!";
 
-    }
 
 
 }
