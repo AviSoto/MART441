@@ -4,7 +4,7 @@ body {
   }
   img {
     padding: 10px;
-    align-self: center;
+    display: inline-block;
   
   }
   h1 {
