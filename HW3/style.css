@@ -1,5 +1,5 @@
 body {
-    background-color: #f1cb80;
+    background-color: #f7deae;
     font-family: 'Helvetica', sans-serif;
   }
   img {
@@ -8,13 +8,13 @@ body {
   
   }
   h1 {
-    font-size: 60px;
+    font-size: 30px;
     font-family: 'Courier New', monospace;
     position: relative;
     text-align: center;
   }
   
   p {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
   }
