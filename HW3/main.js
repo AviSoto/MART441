@@ -1,7 +1,7 @@
 function storyFunction(choice) {
     var answer1 = document.getElementById("choice1").innerHTML;
     var answer2 = document.getElementById("choice2").innerHTML;
-    if (choice == 1 && answer1 == "Yes") {
+    if (choice == 1 && answer1 == "Approach") {
         document.getElementById("story").innerHTML = "Pugster continues into the park with confidence. Pugster meets another dog. What Pugster do now?";
         document.getElementById("choice1").innerHTML = "Meet others";
         document.getElementById("choice2").innerHTML = "Walk alone";
@@ -26,11 +26,10 @@ function storyFunction(choice) {
         document.getElementById("choice1").innerHTML = "Watch from afar";
         document.getElementById("choice2").innerHTML = "Get in closer";
     }
-    // need to do these
-    else if (choice == 1 && answer1 == "Evaluate all dogs") {
-        document.getElementById("story").innerHTML = "Pugster decides that evaluation is the best option." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
+    else if (choice == 1 && answer1 == "Run Away") {
+        document.getElementById("story").innerHTML = "You run back to your office in a cold sweat. You have escaped.. this time." + "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
     } else if (choice == 2 && answer2 == "Stay clear") {
         document.getElementById("story").innerHTML = "Pugster decides staying away is the best option" + "<br>Restart?";
         document.getElementById("choice1").innerHTML = "Yes restart";
