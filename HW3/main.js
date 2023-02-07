@@ -12,15 +12,15 @@ function storyFunction(choice) {
         document.getElementById("storyFunction(1)").innerHTML = "You walk up to the capybara. He looks at you. What do you do?";
         document.getElementById("choice1").innerHTML = "Smile at him";
         document.getElementById("choice2").innerHTML = "Take a picture";
-    } else if (choice == 4 && answer3 == "Smile at him") {
+    } if (choice == 4 && answer3 == "Smile at him") {
         document.getElementById("storyFunction(3)").innerHTML = "You give him a big old cheesy smile. He smiles back at you. What is your next step?";
         document.getElementById("choice1").innerHTML = "Give him your orange from your lunch";
         document.getElementById("choice2").innerHTML = "Scratch his chin";
-    } else if (choice == 5 && answer5 == "Give him your orange from your lunch") {
+    } if (choice == 5 && answer5 == "Give him your orange from your lunch") {
         document.getElementById("storyFunction(5)").innerHTML = "How did you know this is his favorite food? He eats it whole. What is your next move?";
         document.getElementById("choice1").innerHTML = "Scratch his belly";
         document.getElementById("choice2").innerHTML = "Offer him your tuna sandwich";
-    } else if (choice == 6 && answer7 == "Scratch his belly") {
+    } if (choice == 6 && answer7 == "Scratch his belly") {
         document.getElementById("storyFunction(7)").innerHTML = "The capybara loves getting his chin scratched after having a snack. The two of you become best friends.";
         document.getElementById("choice1").innerHTML = "Go for a swim";
         document.getElementById("choice2").innerHTML = "Get a drink";
