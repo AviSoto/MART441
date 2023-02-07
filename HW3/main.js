@@ -36,13 +36,10 @@ function storyFunction(choice) {
         document.getElementById("choice2").innerHTML = "Quit";
     } else if (choice == 5 && answer6 == "Scratch his chin") {
         document.getElementById("storyFunction(6)").innerHTML = "He bites your hand and runs away." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
     } else if (choice == 6 && answer8 == "Offer him your tuna sandwich") {
         document.getElementById("storyFunction(8)").innerHTML = "He stopped eating fish last year. He glares at you and walks away." + "<br>Restart?";
-        document.getElementById("choice1").innerHTML = "Yes restart";
-        document.getElementById("choice2").innerHTML = "No quit";
-
-
-
-}
+        document.getElementById("choice1").innerHTML = "Restart";
+        document.getElementById("choice2").innerHTML = "Quit";
+    }
