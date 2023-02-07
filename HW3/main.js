@@ -23,8 +23,8 @@
             document.getElementById("choice2").innerHTML = "Sing him a song";
         } else if (choice == 2 && answer2 == "Keep running away") {
             document.getElementById("story").innerHTML = "You were too scared to become the capybaras friend." + "<br>Restart?";
-            document.getElementById("choice1").innerHTML = "Yes restart";;
-            document.getElementById("choice2").innerHTML = "No quit";
+            document.getElementById("choice1").innerHTML = "Restart";;
+            document.getElementById("choice2").innerHTML = "Quit";
         } else if (choice == 1 && answer1 == "Scratch him on the chin") {
             document.getElementById("story").innerHTML = "He loves the chin scratch. You are now friends." + "<br>Restart?";
             document.getElementById("choice1").innerHTML = "Restart";
