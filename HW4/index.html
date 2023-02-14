@@ -436,9 +436,9 @@
             if(myChoice === "spring/summer")
             {
                 document.getElementById("choice16").style.display="none";
-                document.getElementById("btnRestart").style.display="none";
+                document.getElementById("btnSubmit16").style.display="none";
                 
-
+                document.getElementById("btnRestart").style.display="block";
                 document.getElementById("mainImage").src = "ireland.jpg";
 
                 myQuestion.innerHTML = "You should go to Ireland";
@@ -446,7 +446,7 @@
             else if(myChoice === "fall/winter")
             {
                 document.getElementById("choice16").style.display="none";
-                document.getElementById("btnRestart").style.display="none";
+                document.getElementById("btnSubmit16").style.display="none";
 
                 document.getElementById("mainImage").src = "mexico.jpg";
 
@@ -519,6 +519,9 @@
 
         <input type="text" id="choice16" value="Enter spring/summer or fall/winter" style="display:none">
         <button id="btnSubmit16" onclick="getChoice16();"  style="display:none">Continue</button>
+        
+        <button id="btnRestart" onclick="getChoice1();"  style="display:none">Restart</button>
+        
     </div>
     </body>
 
