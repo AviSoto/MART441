@@ -48,7 +48,7 @@
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "swimming.jpg"
-                myQuestion.innerHTML = "Noted. Do you prefer a loud and energetic environment or aa quiet one?";
+                myQuestion.innerHTML = "Noted. Do you prefer a loud and energetic environment or a quiet one?";
             }
             else if(answer === "hiking")
             {
@@ -71,20 +71,20 @@
             
             var answer = document.getElementById("choice3").value;
             var myQuestion = document.getElementById("question");
-            if(answer === "loud")
+            if(answer === "beach")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
                 
-                document.getElementById("mainImage").src = "loud.jpg"
+                document.getElementById("mainImage").src = "beach.jpg"
                 myQuestion.innerHTML = "Do you enjoy going out to dance or eat better?";
             }
-            else if(answer === "quiet")
+            else if(answer === "exploring")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
                
-                document.getElementById("mainImage").src = "quiet.jpg"
+                document.getElementById("mainImage").src = "exploring.jpg"
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
             else
@@ -96,12 +96,12 @@
         {
             var answer = document.getElementById("choice4").value;
             var myQuestion = document.getElementById("question");
-            if(answer === "dance")
+            if(answer === "loud")
             {
                 document.getElementById("mainImage").src = "together.jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
-            else if(answer === "eat")
+            else if(answer === "quiet")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -118,12 +118,12 @@
         {
             var answer = document.getElementById("choice5").value;
             var myQuestion = document.getElementById("question");
-            if(answer === "yes")
+            if(answer === "hikes")
             {
                 document.getElementById("mainImage").src = "together.jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
-            else if(answer === "no")
+            else if(answer === "backpacking")
             {
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
@@ -136,12 +136,12 @@
         {
             var answer = document.getElementById("choice6").value;
             var myQuestion = document.getElementById("question");
-            if(answer === "yes")
+            if(answer === "dance")
             {
                 document.getElementById("mainImage").src = "together.jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
-            else if(answer === "no")
+            else if(answer === "eat")
             {
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
