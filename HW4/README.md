@@ -1,0 +1,1 @@
+I struggled with the buttons on this assignment. I could not figure out how to make the previous button go away. I was able to figure out how to change the image which is something I wanted to do in the last assignment.
