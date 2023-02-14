@@ -42,6 +42,9 @@
             var myQuestion = document.getElementById("question");
             if(answer === "swimming")
             {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "swimming.jpg"
@@ -49,6 +52,9 @@
             }
             else if(answer === "hiking")
             {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "hiking.jpg"
@@ -62,17 +68,23 @@
 
         function getChoice3()
         {
-            document.getElementById("choice3").style.display="block";
-            document.getElementById("btnSubmit3").style.display="block";
+            
             var answer = document.getElementById("choice3").value;
             var myQuestion = document.getElementById("question");
             if(answer === "loud")
             {
-                document.getElementById("mainImage").src = "together.jpg"
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("mainImage").src = "loud.jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
             else if(answer === "quiet")
             {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+               
+                document.getElementById("mainImage").src = "quiet.jpg"
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
             else
