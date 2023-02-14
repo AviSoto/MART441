@@ -42,11 +42,15 @@
             var myQuestion = document.getElementById("question");
             if(answer === "swimming")
             {
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "swimming.jpg"
                 myQuestion.innerHTML = "Noted. Do you prefer a loud and energetic environment or aa quiet one?";
             }
             else if(answer === "hiking")
             {
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "hiking.jpg"
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
