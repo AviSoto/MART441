@@ -121,7 +121,7 @@
             if(answer === "hikes")
             {
                 document.getElementById("mainImage").src = ".jpg"
-                myQuestion.innerHTML = "Thank you for your kindness!";
+                myQuestion.innerHTML = "Do you have little or a lot of expierence hiking?";
             }
             else if(answer === "backpacking")
             {
@@ -129,7 +129,7 @@
                 document.getElementById("btnSubmit").style.display="none";
                
                 document.getElementById("mainImage").src = ".jpg"
-                myQuestion.innerHTML = "Please remember we are all in this together.";
+                myQuestion.innerHTML = "Are you planning on staying more or less than a week?";
             }
             else
             {
@@ -188,7 +188,7 @@
             {
             var myChoice = document.getElementById("choice").value;
             var myQuestion = document.getElementById("question");
-            if(myChoice === "cold")
+            if(myChoice === "little")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -198,7 +198,7 @@
                 document.getElementById("mainImage").src = "cold.jpg"
                 myQuestion.innerHTML = "Brrr, great choice. Do you prefer to go swimming or hiking?";
             }
-            else if(myChoice === "warm")
+            else if(myChoice === "a lot")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -218,7 +218,7 @@
             {
             var myChoice = document.getElementById("choice").value;
             var myQuestion = document.getElementById("question");
-            if(myChoice === "cold")
+            if(myChoice === "less")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -226,9 +226,9 @@
                 document.getElementById("choice2").style.display="block";
                 document.getElementById("btnSubmit2").style.display="block";
                 document.getElementById("mainImage").src = "cold.jpg"
-                myQuestion.innerHTML = "Brrr, great choice. Do you prefer to go swimming or hiking?";
+                myQuestion.innerHTML = "Finally, ";
             }
-            else if(myChoice === "warm")
+            else if(myChoice === "more")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -236,7 +236,7 @@
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "warm.jpg"
-                myQuestion.innerHTML = "Great choice.  Would you rather go to the beach or go exploring?";
+                myQuestion.innerHTML = "Finally, ";
 
             }
             else
