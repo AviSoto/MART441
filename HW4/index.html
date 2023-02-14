@@ -436,7 +436,7 @@
             if(myChoice === "spring/summer")
             {
                 document.getElementById("choice").style.display="none";
-                document.getElementById("btnSubmit").style.display="none";
+                document.getElementById("btnRestart").style.display="none";
                 
 
                 document.getElementById("mainImage").src = "ireland.jpg";
@@ -446,7 +446,7 @@
             else if(myChoice === "fall/winter")
             {
                 document.getElementById("choice").style.display="none";
-                document.getElementById("btnSubmit").style.display="none";
+                document.getElementById("btnRestart").style.display="none";
 
                 document.getElementById("mainImage").src = "mexico.jpg";
 
@@ -459,7 +459,7 @@
 
         <h1>Vacation Quiz</h1>
         <br>
-        <img src=".jpg" id="mainImage">
+        <img src="vacation.jpg" id="mainImage">
     <div id="question">
     <br>
         Searching for the best vacation spot?
@@ -488,7 +488,7 @@
         <input type="text" id="choice6" value="Enter dance or eat"  style="display:none">
         <button id="btnSubmit6" onclick="getChoice6();" style="display:none">Continue</button>
 
-        <input type="text" id="choice7 value="Enter yes or no" style="display:none">
+        <input type="text" id="choice7" value="Enter yes or no" style="display:none">
         <button id="btnSubmit7" onclick="getChoice7();"  style="display:none">Continue</button>
 
         <input type="text" id="choice8" value="Enter casual or fancy" style="display:none">
@@ -516,7 +516,9 @@
         <button id="btnSubmit15" onclick="getChoice15();"  style="display:none">Continue</button>
 
         <input type="text" id="choice16" value="Enter spring/summer or fall/winter" style="display:none">
-        <button id="btnSubmit16" onclick="getChoice16();"  style="display:none">Restart</button>
+        <button id="btnSubmit16" onclick="getChoice16();"  style="display:none">Continue</button>
+
+        <button id="btnRestart" onclick="getChoice1();"  style="display:none">Restart</button>
 </div>
         
     </body>
