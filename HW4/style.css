@@ -1,6 +1,6 @@
 body {
     background-color: #fceba6;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Perpetua', serif;
   }
   .center {
     display: block;
@@ -14,8 +14,8 @@ body {
   }
   
   h1 {
-    font-size: 60px;
-    font-family: 'Courier New', monospace;
+    font-size: 50px;
+    font-family: 'Optima', sans-serif;
     position: relative;
     text-align: center;
     color: #6c5919;
