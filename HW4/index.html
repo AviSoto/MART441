@@ -16,8 +16,7 @@
                 
                 document.getElementById("choice2").style.display="block";
                 document.getElementById("btnSubmit2").style.display="block";
-                
-
+                document.getElementById("mainImage").src = "cold.jpg"
                 myQuestion.innerHTML = "Brrr, great choice. Do you prefer to go swimming or hiking?";
             }
             else if(myChoice === "warm")
@@ -27,6 +26,7 @@
                 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
+                document.getElementById("mainImage").src = "warm.jpg"
                 myQuestion.innerHTML = "Great choice.  Would you rather go to the beach or go exploring?";
 
             }
@@ -54,6 +54,48 @@
         function getChoice3()
         {
             var answer = document.getElementById("choice3").value;
+            var myQuestion = document.getElementById("question");
+            if(answer === "yes")
+            {
+                document.getElementById("mainImage").src = "together.jpg"
+                myQuestion.innerHTML = "Thank you for your kindness!";
+            }
+            else if(answer === "no")
+            {
+                myQuestion.innerHTML = "Please remember we are all in this together.";
+            }
+        }
+        function getChoice4()
+        {
+            var answer = document.getElementById("choice4").value;
+            var myQuestion = document.getElementById("question");
+            if(answer === "yes")
+            {
+                document.getElementById("mainImage").src = "together.jpg"
+                myQuestion.innerHTML = "Thank you for your kindness!";
+            }
+            else if(answer === "no")
+            {
+                myQuestion.innerHTML = "Please remember we are all in this together.";
+            }
+        }
+        function getChoice5()
+        {
+            var answer = document.getElementById("choice5").value;
+            var myQuestion = document.getElementById("question");
+            if(answer === "yes")
+            {
+                document.getElementById("mainImage").src = "together.jpg"
+                myQuestion.innerHTML = "Thank you for your kindness!";
+            }
+            else if(answer === "no")
+            {
+                myQuestion.innerHTML = "Please remember we are all in this together.";
+            }
+        }
+        function getChoice6()
+        {
+            var answer = document.getElementById("choice6").value;
             var myQuestion = document.getElementById("question");
             if(answer === "yes")
             {
