@@ -52,7 +52,7 @@
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
                 document.getElementById("mainImage").src = "hiking.jpg"
-                myQuestion.innerHTML = "Please remember we are all in this together.";
+                myQuestion.innerHTML = "What a great way to stay active. Would you prefer day hikes or backpacking?";
             }
             else
             {
@@ -62,14 +62,16 @@
 
         function getChoice3()
         {
+            document.getElementById("choice3").style.display="block";
+            document.getElementById("btnSubmit3").style.display="block";
             var answer = document.getElementById("choice3").value;
             var myQuestion = document.getElementById("question");
-            if(answer === "yes")
+            if(answer === "loud")
             {
                 document.getElementById("mainImage").src = "together.jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
-            else if(answer === "no")
+            else if(answer === "quiet")
             {
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
