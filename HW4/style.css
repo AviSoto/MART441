@@ -8,6 +8,11 @@ body {
     margin-right: auto;
     width: 50%;
   }
+  .mainImage{
+    width: 500 px;
+    height: 500 px;
+  }
+  
   h1 {
     font-size: 60px;
     font-family: 'Courier New', monospace;
