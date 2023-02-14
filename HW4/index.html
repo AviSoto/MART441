@@ -1,15 +1,15 @@
 <html>
-    <style>
-        body{
-            background-color: bisque;
-        }
-    </style>
+    <head>
+        <title>Best Vacation Spot</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
     <script>
         function getChoice1()
         {
             var myChoice = document.getElementById("choice").value;
             var myQuestion = document.getElementById("question");
-            if(myChoice === "Green")
+            if(myChoice === "cold")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
@@ -18,16 +18,16 @@
                 document.getElementById("btnSubmit2").style.display="block";
                 
 
-                myQuestion.innerHTML = "Green is a great choice. Is the color of generosity. Would you be willing to give food to those in need?";
+                myQuestion.innerHTML = "Brrr, great choice. Do you prefer to go swimming or hiking?";
             }
-            else if(myChoice === "Blue")
+            else if(myChoice === "warm")
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
                 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
-                myQuestion.innerHTML = "Blue is the color of loyalty and sincerity.  Are you willing to show up and stand by those who need a friend?";
+                myQuestion.innerHTML = "Great choice.  Would you rather go to the beach or go exploring?";
 
             }
             else
@@ -40,12 +40,12 @@
         {
             var answer = document.getElementById("choice2").value;
             var myQuestion = document.getElementById("question");
-            if(answer === "yes")
+            if(answer === "swimming")
             {
                 document.getElementById("mainImage").src = "grateful.jpg"
-                myQuestion.innerHTML = "Thank you for your kindness!";
+                myQuestion.innerHTML = "Noted. Do you prefer a loud and energetic environment or aa quiet one?";
             }
-            else if(answer === "no")
+            else if(answer === "hiking")
             {
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
@@ -73,18 +73,18 @@
         <img src="tree.jpeg" id="mainImage">
     <div id="question">
     <br>
-        It was a dark and lonely time in Bob's life. He was wandering aimlessly and wondering where to go.
+        Searching for the best vacation spot?
         <br>
-        He came upon a tree and it asked him what his favorite color was.
+        Look no further!
         <br>
-        He had only two choices.  It was Green or Blue.
+        Do you prefer somewhere cold or warm?
     </div>
        
         <br>
-        <input type="text" size="30" id="choice" value="Please enter Green or Blue">
+        <input type="text" size="30" id="choice" value="Please enter cold or warm">
         <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
 
-        <input type="text" size="30" id="choice2" value="Enter yes or no." style="display:none">
+        <input type="text" size="30" id="choice2" value="Enter swimming or hiking." style="display:none">
         <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
 
         <input type="text" size="30" id="choice3" value="Enter yes or no."  style="display:none">

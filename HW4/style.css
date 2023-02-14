@@ -1,0 +1,23 @@
+body {
+    background-color: #a6fcac;
+    font-family: 'Helvetica', sans-serif;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  h1 {
+    font-size: 60px;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    text-align: center;
+    color: #00295c;
+  }
+
+  div {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+  }
