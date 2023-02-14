@@ -13,6 +13,7 @@
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
+                myChoice.value = "Enter cold or warm";
                 
                 document.getElementById("choice2").style.display="block";
                 document.getElementById("btnSubmit2").style.display="block";
@@ -25,6 +26,7 @@
             {
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
+                myChoice.value = "Enter cold or warm";
                 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
@@ -459,7 +461,7 @@
         {
             document.getElementById("btnRestart").style.display="none";
             document.getElementById("mainImage").src = "vacation.jpg";
-            
+
             var myQuestion = document.getElementById("question");
             myQuestion.innerHTML = "Do you prefer somewhere cold or warm?"
 
