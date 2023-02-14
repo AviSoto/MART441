@@ -16,7 +16,7 @@
                 
                 document.getElementById("choice2").style.display="block";
                 document.getElementById("btnSubmit2").style.display="block";
-                document.getElementById("mainImage").src = "cold.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Brrr, great choice. Do you prefer to go swimming or hiking?";
             }
             else if(myChoice === "warm")
@@ -26,7 +26,7 @@
                 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
-                document.getElementById("mainImage").src = "warm.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Great choice.  Would you rather go to the beach or go exploring?";
 
             }
@@ -47,7 +47,7 @@
                 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
-                document.getElementById("mainImage").src = "swimming.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Noted. Do you prefer a loud and energetic environment or a quiet one?";
             }
             else if(answer === "hiking")
@@ -57,7 +57,7 @@
                 
                 document.getElementById("choice3").style.display="block";
                 document.getElementById("btnSubmit3").style.display="block";
-                document.getElementById("mainImage").src = "hiking.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "What a great way to stay active. Would you prefer day hikes or backpacking?";
             }
             else
@@ -76,7 +76,7 @@
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
                 
-                document.getElementById("mainImage").src = "beach.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Do you enjoy going out to dance or eat better?";
             }
             else if(answer === "exploring")
@@ -84,7 +84,7 @@
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
                
-                document.getElementById("mainImage").src = "exploring.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
             else
@@ -98,7 +98,7 @@
             var myQuestion = document.getElementById("question");
             if(answer === "loud")
             {
-                document.getElementById("mainImage").src = "together.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
             else if(answer === "quiet")
@@ -106,7 +106,7 @@
                 document.getElementById("choice").style.display="none";
                 document.getElementById("btnSubmit").style.display="none";
                
-                document.getElementById("mainImage").src = "quiet.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
             else
@@ -120,11 +120,15 @@
             var myQuestion = document.getElementById("question");
             if(answer === "hikes")
             {
-                document.getElementById("mainImage").src = "together.jpg"
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Thank you for your kindness!";
             }
             else if(answer === "backpacking")
             {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+               
+                document.getElementById("mainImage").src = ".jpg"
                 myQuestion.innerHTML = "Please remember we are all in this together.";
             }
             else
@@ -275,7 +279,7 @@
 
         <h1>Vacation Quiz</h1>
         <br>
-        <img src="vacation.jpg" id="mainImage">
+        <img src=".jpg" id="mainImage">
     <div id="question">
     <br>
         Searching for the best vacation spot?
