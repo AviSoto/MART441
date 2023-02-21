@@ -7,7 +7,6 @@ function printBlanks()
     createRandomImageArray();
     for(var i = 0; i < imageTags.length; i++)
     {
-    // iterate through the image tag ids and sets the source 
         document.getElementById(imageTags[i]).src= blankImagePath;
     }  
 }
@@ -31,8 +30,6 @@ function createRandomImageArray()
 function flipImage(number)
 {
     document.getElementById(imageTags[number]).src= actualImages[number];
-        // this should be a quick function that just changes
-        // the image based on what number was pressed
         
     
 }
