@@ -1,51 +1,42 @@
 <html>
 
 <head>
-  <title>Example</title>
-  <style>
-    .image {
-      width: 200px;
-      height: 200px;
-      color: black;
-      display: inline-block;
-    }
-  </style>
-  <head>
-    <h1>Display Images</h1>
-  </head>
-  <script>
-    function printMoons() {
-      var  = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimus", "Titan"];
-      moon.sort();
-      var allMoons = "";
-      for (var i = 0; i < moon.length; i++) {
-        allMoons += moon[i] + "<br>";
-      }
-      document.getElementById("myInfo").innerHTML = allMoons;
-    
-    }
-    var actual_images = {
-        "Callisto.jpg",
-        "Charon.jpg",
-        "Dione.jpg",
-        "Enceladus.jpg",
-        "Europa.jpg",
-        "Ganymede.jpg",
-        "Hyperion.jpg",
-        "Lapetus.jpg",
-        "Mimus.jpg",
-        "Titan.jpg"
-}
-actual_images.sort(() => Math.random() - 0.5);
-}
-  </script>
+    <title>
+        Memory Moons Matching
+    </title>
+    <script src="scripts/main.js"></script>
+    </link>
 </head>
 
-<body onload="printMoons();">
-  <script>
+<body onload="printBlanks();">
+    <h1>Memory Game</h1>
 
-  </script>
-  <div id="myInfo"></div>
+
+    <div class="divTable">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell"><img src="" id="Callisto" width="250" height="200" onclick="flipImage(0);"></div>
+                <div class="divTableCell"><img src="" id="Charon" width="250" height="200" onclick="flipImage(1);"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell"><img src="" id="Dione" width="250" height="200" onclick="flipImage(2);"></div>
+                <div class="divTableCell"><img src="" id="Titan" width="250" height="200" onclick="flipImage(3);"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell"><img src="" id="Europa" width="250" height="200" onclick="flipImage(4);"></div>
+                <div class="divTableCell"><img src="" id="Enceladus" width="250" height="200" onclick="flipImage(5);"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell"><img src="" id="Ganymede" width="250" height="200" onclick="flipImage(6);"></div>
+                <div class="divTableCell"><img src="" id="Mimas" width="250" height="200" onclick="flipImage(7);"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell"><img src="" id="Lapetus" width="250" height="200" onclick="flipImage(8);"></div>
+                <div class="divTableCell"><img src="" id="Hyperion" width="250" height="200" onclick="flipImage(9);"></div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
