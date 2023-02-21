@@ -14,19 +14,13 @@ function printBlanks()
     {
     // iterate through the image tag ids and sets the source 
         document.getElementById(imageTags[i]).src= blankImagePath;
-    }
-       
-    
-    
+    }  
 }
 
 function createRandomImageArray()
 {
-    // create an array of actual images
     var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg"];
-    // create another array to make sure the images only get added twice
     var count = [0,0];
-    // create a while statement to check to see if our actual image array is full
     while(actualImages.length < 4)
     {
         // get a random number between 0 and the number total number of images that we can choose from
@@ -39,12 +33,7 @@ function createRandomImageArray()
             // then add one to the array that makes sure only two images can be added
             count[randomNumber] = count[randomNumber] + 1;
         }
-    }
-    
-  
-    
-    
-        
+    }      
 }
 
 function flipImage(number)
