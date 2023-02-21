@@ -1,8 +1,5 @@
-// create an array of image names that correspond to the image tags
 var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimas", "Titan"];
-// create a variable with the blank image name
-var blankImagePath = "images/gofish.jpg";
-// create a empty array for the actual images
+var blankImagePath = "images/Blank.jpg";
 var actualImages = new Array();
     
 function printBlanks()
