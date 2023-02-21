@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title>Example</title>
+  <style>
+    .image {
+      width: 200px;
+      height: 200px;
+      color: black;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function printMoons() {
+      var  = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimus", "Titan"];
+      moon.sort();
+      var allMoons = "";
+      for (var i = 0; i < moon.length; i++) {
+        allMoons += moon[i] + "<br>";
+      }
+      document.getElementById("myInfo").innerHTML = allMoons;
+    
+    }
+    var actual_images = {
+        "Callisto.jpg",
+        "Charon.jpg",
+        "Dione.jpg",
+        "Enceladus.jpg",
+        "Europa.jpg",
+        "Ganymede.jpg",
+        "Hyperion.jpg",
+        "Lapetus.jpg",
+        "Mimus.jpg",
+        "Titan.jpg"
+}
+  </script>
+</head>
+
+<body onload="printMoons();">
+  <script>
+
+  </script>
+  <div id="myInfo"></div>
+</body>
+
+</html>
