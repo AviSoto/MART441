@@ -1,5 +1,5 @@
 // create an array of image names that correspond to the image tags
-var imageTags = ["image1", "image2", "image3", "image4"];
+var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimas", "Titan"];
 // create a variable with the blank image name
 var blankImagePath = "images/gofish.jpg";
 // create a empty array for the actual images
@@ -19,7 +19,7 @@ function printBlanks()
 
 function createRandomImageArray()
 {
-    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg"];
+    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Titan.jpg"];
     var count = [0,0];
     while(actualImages.length < 4)
     {
