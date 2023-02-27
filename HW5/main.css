@@ -5,3 +5,7 @@ body{
 image{
 	width: 5%;
 }
+
+.hide{
+	filter: brightness(0.0);
+}
