@@ -17,7 +17,7 @@ image{
 }
 
 .hide{
-	filter: brightness(1.0);
+	background-image: url('images/Blank.jpg');
 }
 
 .show {
