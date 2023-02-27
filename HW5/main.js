@@ -8,8 +8,10 @@ function printBlanks()
     for(var i = 0; i < imageTags.length; i++)
     {
         document.getElementById(imageTags[i]).src= blankImagePath;
-    }  
+    }
+    shuffleImages();
 }
+
 
 function createRandomImageArray()
 {
