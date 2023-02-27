@@ -34,8 +34,14 @@
 
 </html>
 <script>
+card1 = null;
+card2 = null;
 
     function clicked(card){
-        card.className = "show";
+       
+        if(card1==null)
+        {
+            card.className = "show";
+            card1 = card;
     }
 </script>
