@@ -1,22 +1,20 @@
-var actualImages = new Array();
-var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Mimas", "Titan"];
+var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimas", "Titan"];
 var blankImagePath = "images/Blank.jpg";
-
+var actualImages = new Array();
+    
 function printBlanks()
 {
     createRandomImageArray();
     for(var i = 0; i < imageTags.length; i++)
     {
         document.getElementById(imageTags[i]).src= blankImagePath;
-    }
-    shuffleImages();
+    }  
 }
-
 
 function createRandomImageArray()
 {
-    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Mimas.jpg", "images/Titan.jpg"];
-    var count = [0,0,0,0,0,0,0,0];
+    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Titan.jpg"];
+    var count = [0,0];
     while(actualImages.length < 4)
     {
         var randomNumber = Math.floor(Math.random() * actualImagePath.length)
@@ -31,5 +29,7 @@ function createRandomImageArray()
 
 function flipImage(number)
 {
-    document.getElementById(imageTags[number]).src= actualImages[number];     
+    document.getElementById(imageTags[number]).src= actualImages[number];
+        
+    
 }

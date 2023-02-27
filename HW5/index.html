@@ -1,39 +1,73 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Memory Moons Matching</title>
+
+<head>
+    <title>
+        Memory Moons Matching
+    </title>
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
-  </head>
-  <body onload="printBlanks(); shuffleImages();">
-    <header>
-      <h1>Memory Game</h1>
-    </header>
-    <main>
-      <div class="row">
-        <img class="card" onClick="clicked(this)"; src="images/Mimas.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Charon.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Ganymede.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Europa.jpg">
-      </div>
-      <div class="row">
-        <img class="card" onClick="clicked(this)"; src="images/Titan.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Enceladus.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Dione.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Titan.jpg">
-      </div>
-      <div class="row">
-        <img class="card" onClick="clicked(this)"; src="images/Callisto.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Dione.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Europa.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Callisto.jpg">
-      </div>
-      <div class="row">
-        <img class="card" onClick="clicked(this)"; src="images/Charon.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Ganymede.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Enceladus.jpg">
-        <img class="card" onClick="clicked(this)"; src="images/Mimas.jpg">
-      </div>
-    </main>
-  </body>
+    </link>
+</head>
+
+<body onload="printBlanks();">
+    <h1>Memory Game</h1>
+        <img class="hide" onClick="clicked(this)"; src="images/Mimas.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Charon.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Ganymede.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Europa.jpg"></img>
+<br>
+        <img class="hide" onClick="clicked(this)"; src="images/Titan.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Enceladus.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Dione.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Titan.jpg"></img>
+<br>
+        <img class="hide" onClick="clicked(this)"; src="images/Callisto.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Dione.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Europa.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Callisto.jpg"></img>
+<br>
+        <img class="hide" onClick="clicked(this)"; src="images/Charon.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Ganymede.jpg"></img>        
+        <img class="hide" onClick="clicked(this)"; src="images/Enceladus.jpg"></img>
+        <img class="hide" onClick="clicked(this)"; src="images/Mimas.jpg"></img>
+</body>
+
 </html>
+<script>
+card1 = null;
+card2 = null;
+
+var matchSound = new Audio ("sounds/correct.mp3");
+var noMatchSound = new Audio ("sounds/incorrect.mp3");
+
+    function clicked(card){
+       
+        if(card1==null)
+        {
+            card.className = "show";
+            card1 = card;
+        }
+        else if(card2==null)
+        {
+            card.className = "show";
+            card2 = card;
+            
+            setTimeout("checkMatch();", 1000);
+        }
+    }
+
+    function checkMatch(){
+      if(card1.src==card2.src){
+        matchSound.play();
+        card1 = null;
+        card2 = null;
+      }
+      else {
+        noMatchSound.play();
+       card1.className = "hide";
+       card2.className = "hide";
+        card1 = null;
+        card2 = null; 
+      }
+    }
+</script>
