@@ -16,7 +16,7 @@ image{
 }
 
 .hide{
-	filter: brightness(0.0);
+	filter: brightness(1.0);
 }
 
 .show {
