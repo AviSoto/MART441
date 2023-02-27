@@ -1,5 +1,5 @@
 var actualImages = new Array();
-var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimas", "Titan"];
+var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Mimas", "Titan"];
 var blankImagePath = "images/Blank.jpg";
 
 function printBlanks()
