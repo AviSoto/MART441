@@ -9,7 +9,7 @@
     </link>
 </head>
 
-<body onload="printBlanks();">
+<body onload="printBlanks(); shuffleImages();">
     <h1>Memory Game</h1>
         <img class="hide" onClick="clicked(this)"; src="images/Mimas.jpg"></img>
         <img class="hide" onClick="clicked(this)"; src="images/Charon.jpg"></img>
@@ -70,4 +70,13 @@ var noMatchSound = new Audio ("sounds/incorrect.mp3");
         card2 = null; 
       }
     }
-</script>
+
+    function shuffleImages() {
+        var images = document.getElementsByTagName("img");
+        var srcs = [];
+        for (var i = 0; i < images.length; i++) {
+            srcs.push(images[i].src);
+        }
+        srcs = shuffleArray(srcs);
+        for (var i = 0; i < images.length; i++) {
+            images[i].src = srcs[i];
