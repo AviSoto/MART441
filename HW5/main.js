@@ -1,35 +1,38 @@
-var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimas", "Titan"];
-var blankImagePath = "images/Blank.jpg";
-var actualImages = new Array();
-    
-function printBlanks()
-{
-    createRandomImageArray();
-    for(var i = 0; i < imageTags.length; i++)
-    {
-        document.getElementById(imageTags[i]).src= blankImagePath;
-    }  
-}
+<script>
+card1 = null;
+card2 = null;
 
-function createRandomImageArray()
-{
-    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Titan.jpg"];
-    var count = [0,0];
-    while(actualImages.length < 4)
-    {
-        var randomNumber = Math.floor(Math.random() * actualImagePath.length)
+var matchSound = new Audio ("sounds/correct.mp3");
+var noMatchSound = new Audio ("sounds/incorrect.mp3");
 
-        if(count[randomNumber] < 2)
+    function clicked(card){
+       
+        if(card1==null)
         {
-            actualImages.push(actualImagePath[randomNumber]);
-            count[randomNumber] = count[randomNumber] + 1;
+            card.className = "show";
+            card1 = card;
         }
-    }      
-}
+        else if(card2==null)
+        {
+            card.className = "show";
+            card2 = card;
+            
+            setTimeout("checkMatch();", 1000);
+        }
+    }
 
-function flipImage(number)
-{
-    document.getElementById(imageTags[number]).src= actualImages[number];
-        
-    
-}
+    function checkMatch(){
+      if(card1.src==card2.src){
+        matchSound.play();
+        card1 = null;
+        card2 = null;
+      }
+      else {
+        noMatchSound.play();
+       card1.className = "hide";
+       card2.className = "hide";
+        card1 = null;
+        card2 = null; 
+      }
+    }
+</script>
