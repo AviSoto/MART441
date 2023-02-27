@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(236, 178, 178);
+    background-color:rgb(196, 196, 196);
 }
 
 h1{
@@ -17,9 +17,9 @@ image{
 }
 
 .hide{
-	background-image: url('images/Blank.jpg');
+	filter: brightness(0.0);
 }
 
 .show {
-	background-image: none;
+	filter:brightness(1.0)
 }
