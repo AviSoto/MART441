@@ -37,6 +37,9 @@
 card1 = null;
 card2 = null;
 
+var matchSound = new Audio ("sounds/correct.mp3");
+var noMatchSound = new Audio ("sounds/incorrect.mp3");
+
     function clicked(card){
        
         if(card1==null)
@@ -55,11 +58,12 @@ card2 = null;
 
     function checkMatch(){
       if(card1.src==card2.src){
-        alert(" Match")
+        matchSound.play();
         card1 = null;
         card2 = null;
       }
       else {
+        noMatchSound.play();
        card1.className = "hide";
        card2.className = "hide";
         card1 = null;
