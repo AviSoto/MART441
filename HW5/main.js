@@ -1,7 +1,7 @@
+var actualImages = new Array();
 var imageTags = ["Callisto", "Charon", "Dione", "Enceladus", "Europa", "Ganymede", "Hyperion", "Lapetus", "Mimas", "Titan"];
 var blankImagePath = "images/Blank.jpg";
-var actualImages = new Array();
-    
+
 function printBlanks()
 {
     createRandomImageArray();
@@ -29,7 +29,5 @@ function createRandomImageArray()
 
 function flipImage(number)
 {
-    document.getElementById(imageTags[number]).src= actualImages[number];
-        
-    
+    document.getElementById(imageTags[number]).src= actualImages[number];     
 }
