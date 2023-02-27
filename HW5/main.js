@@ -1,3 +1,39 @@
+const cardArray = [
+{
+    name: 'Callisto',
+    img: 'images/Callisto.jpg'
+},
+{
+    name: 'Charon',
+    img: 'images/Charon.jpg'
+},
+{
+    name: 'Dione',
+    img: 'images/Dione.jpg'
+},
+{
+    name: 'Enceladus',
+    img: 'images/Enceladus.jpg'
+},
+{
+    name: 'Europa',
+    img: 'images/Europa.jpg'
+},
+{
+    name: 'Ganymede',
+    img: 'images/Ganymede.jpg'
+},
+{
+    name: 'Mimas',
+    img: 'images/Mimas.jpg'
+},
+{
+    name: 'Titan',
+    img: 'images/Titan.jpg'
+},
+
+]
+
 card1 = null;
 card2 = null;
 
