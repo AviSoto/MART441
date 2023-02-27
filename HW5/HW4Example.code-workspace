@@ -1,11 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "../../../../Desktop/HW4Example"
-		},
-		{
-			"path": ".."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
