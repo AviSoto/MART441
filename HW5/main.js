@@ -1,3 +1,4 @@
+<script>
 card1 = null;
 card2 = null;
 
@@ -34,3 +35,4 @@ var noMatchSound = new Audio ("sounds/incorrect.mp3");
         card2 = null; 
       }
     }
+</script>
