@@ -13,7 +13,7 @@ function printBlanks()
 
 function createRandomImageArray()
 {
-    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Titan.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Titan.jpg"];
+    var actualImagePath = ["images/Callisto.jpg", "images/Charon.jpg", "images/Dione.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Titan.jpg", "images/Enceladus.jpg", "images/Europa.jpg", "images/Ganymede.jpg", "images/Hyperion.jpg", "images/Lapetus.jpg", "images/Mimas.jpg", "images/Moon.jpg", "images/Titan.jpg, "images/Triton.jpg,"];
     var count = [0,0];
     while(actualImages.length < 4)
     {
