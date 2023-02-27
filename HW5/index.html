@@ -48,6 +48,13 @@ card2 = null;
         {
             card.className = "show";
             card2 = card;    
+            checkMatch();
         }
+    }
+
+    function checkMatch(){
+      if(card1.src==card2.src){
+        alert(" Match")
+      }
     }
 </script>
