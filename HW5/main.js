@@ -43,19 +43,11 @@ const cardGenerator = () => {
     card.appendChild(face);
     card.appendChild(back);
 
-    card.addEventListener("click", (e) => {
-        card.classList.toggle("flip");
-     });
+    card.addEventListener("click", function () {
+      card.classList.toggle("flip");
+    });
 
     });
 };
 
 cardGenerator();
-
-const cards = document.querySelectorAll('card');
-function flipCard() {
-    this.classList.toggle('flip');
-    card.addEventListener("click", (e)=> { console.log("hello");});
- }
- 
- cards.forEach(card => card.addEventListener('click', flipCard));
