@@ -1,3 +1,5 @@
+const section = document.querySelector('selection');
+
 const cardArray = () => [
 {
     name: 'Callisto',imgSrc: 'images/Callisto.jpg'
