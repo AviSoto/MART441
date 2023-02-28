@@ -27,7 +27,8 @@ section {
 .card{
 	position: relative;
 	transform-style: preserve-3d;
-	transform: rotateY(45deg);
+	transition: all 2s ease;
+	transform: rotateY(0deg);
 }
 
 .face,
