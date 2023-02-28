@@ -28,7 +28,7 @@ section {
 	position: relative;
 	transform-style: preserve-3d;
 	transition: all 2s ease;
-	transform: rotateY(0deg);
+	transform: rotateY(90deg);
 }
 
 .face,
