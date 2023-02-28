@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(106, 88, 52);
+    background-color:rgb(106, 52, 104);
 }
 
 h1{
@@ -8,18 +8,4 @@ h1{
     position: relative;
     text-align: center;
     color: #2d2d2d;
-}
-
-image{
-	width: 5%;
-	align-items: center;
-	position: relative;
-}
-
-.hide{
-	filter: brightness(0.0);
-}
-
-.show {
-	filter:brightness(1.0)
 }
