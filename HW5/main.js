@@ -19,13 +19,6 @@ const cardArray = () => [
   { name: "Titan", imgSrc: "./images/Titan.jpg"},
 ];
 
-const cards = document.querySelectorAll('card');
-function flipCard() {
-    this.classList.toggle('flip');
- }
- 
- cards.forEach(card => card.addEventListener('click', flipCard));
-
 const randomize = () => {
   const cards = cardArray();
   cards.sort(() => Math.random() - 0.5);
@@ -37,21 +30,32 @@ const cardGenerator = () => {
 
   cardArray.forEach(item => {
     const card = document.createElement("div");
-    const face = document.createElement("img");
     const back = document.createElement("img");
+    const face = document.createElement("img");
     card.classList = "card";
     back.classList = "back";
     face.classList = "face";
    
-    back.src = item.{./images/Blank.jpg};
+    back.src = "./images/Blank.jpg";
     face.src = item.imgSrc;
 
     section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
-    
+
+    card.addEventListener("click", (e) => {
+        card.classList.toggle("flip");
+     });
+
     });
-  });
 };
 
 cardGenerator();
+
+const cards = document.querySelectorAll('card');
+function flipCard() {
+    this.classList.toggle('flip');
+    card.addEventListener("click", (e)=> { console.log("hello");});
+ }
+ 
+ cards.forEach(card => card.addEventListener('click', flipCard));
