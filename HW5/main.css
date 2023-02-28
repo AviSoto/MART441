@@ -40,7 +40,7 @@ section {
 }
 
 .back {
-	background-color: white;
+	background: white;
 	backface-visibility: hidden;
 }
 
