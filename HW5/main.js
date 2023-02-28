@@ -22,7 +22,7 @@ const cardArray = () => [
 
 const randomize = () => {
     const cardArray = getCards();
-    cardArray.sort() => Math.random() - 0.5);
+    cardArray.sort(() => Math.random() - 0.5);
     return cardArray;
 };
 
