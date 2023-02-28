@@ -67,6 +67,9 @@ const cardGenerator = () => {
    card.classList = 'card';
    face.classList = 'face';
    back.classList = 'back';
+   
+   face.src - item.imgSrc;
+   
    selection.appendChild(card);
    card.appendChild(face);
    card.appendChild(back);
