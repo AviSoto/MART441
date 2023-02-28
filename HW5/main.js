@@ -1,4 +1,4 @@
-const section = document.querySelector('selection');
+const section = document.querySelector('section');
 
 const cardArray = () => [
   { name: "Callisto", imgSrc: "./images/Callisto.jpg"},
@@ -20,9 +20,9 @@ const cardArray = () => [
 ];
 
 const randomize = () => {
-  const cardArray = getCards();
-  cardArray.sort(() => Math.random() - 0.5);
-  return cardArray;
+  const cards = cardArray();
+  cards.sort(() => Math.random() - 0.5);
+  return cards;
 };
 
 const cardGenerator = () => {
@@ -38,7 +38,7 @@ const cardGenerator = () => {
    
     face.src = item.imgSrc;
 
-    selection.appendChild(card);
+    section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
   });
