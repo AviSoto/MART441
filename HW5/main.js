@@ -31,11 +31,12 @@ const cardGenerator = () => {
   cardArray.forEach(item => {
     const card = document.createElement("div");
     const face = document.createElement("img");
-    const back = document.createElement("div");
+    const back = document.createElement("img");
     card.classList = "card";
-    face.classList = "face";
     back.classList = "back";
+    face.classList = "face";
    
+    back.src = item.{./images/Blank.jpg};
     face.src = item.imgSrc;
 
     section.appendChild(card);
