@@ -39,6 +39,10 @@ section {
 	position: absolute;
 }
 
+.card.flip {
+	transform: rotateY(180deg);
+  }
+  
 .back {
 	background: white;
 	backface-visibility: hidden;

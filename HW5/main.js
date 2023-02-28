@@ -19,6 +19,13 @@ const cardArray = () => [
   { name: "Titan", imgSrc: "./images/Titan.jpg"},
 ];
 
+const cards = document.querySelectorAll('card');
+function flipCard() {
+    this.classList.toggle('flip');
+ }
+ 
+ cards.forEach(card => card.addEventListener('click', flipCard));
+
 const randomize = () => {
   const cards = cardArray();
   cards.sort(() => Math.random() - 0.5);
