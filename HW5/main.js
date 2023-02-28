@@ -1,54 +1,22 @@
 const section = document.querySelector('selection');
 
 const cardArray = () => [
-{
-    name: 'Callisto',imgSrc: 'images/Callisto.jpg'
-},
-{
-    name: 'Charon', imgSrc: 'images/Charon.jpg'
-},
-{
-    name: 'Dione', imgSrc: 'images/Dione.jpg'
-},
-{
-    name: 'Enceladus', imgSrc: 'images/Enceladus.jpg'
-},
-{
-    name: 'Europa', imgSrc: 'images/Europa.jpg'
-},
-{
-    name: 'Ganymede', imgSrc: 'images/Ganymede.jpg'
-},
-{
-    name: 'Mimas', imgSrc: 'images/Mimas.jpg'
-},
-{
-    name: 'Titan', imgSrc: 'images/Titan.jpg'
-},
-{
-    name: 'Callisto', imgSrc: 'images/Callisto.jpg'
-},
-{
-    name: 'Charon', imgSrc: 'images/Charon.jpg'
-},
-{
-    name: 'Dione', imgSrc: 'images/Dione.jpg'
-},
-{
-    name: 'Enceladus', imgSrc: 'images/Enceladus.jpg'
-},
-{
-    name: 'Europa', imgSrc: 'images/Europa.jpg'
-},
-{
-    name: 'Ganymede', imgSrc: 'images/Ganymede.jpg'
-},
-{
-    name: 'Mimas', imgSrc: 'images/Mimas.jpg'
-},
-{
-    name: 'Titan', imgSrc: 'images/Titan.jpg'
-},
+{ name: "Callisto", imgSrc: "./images/Callisto.jpg"},
+{ name: "Charon", imgSrc: "./images/Charon.jpg"},
+{ name: "Dione", imgSrc: "./images/Dione.jpg"},
+{ name: "Enceladus", imgSrc: "./images/Enceladus.jpg"},
+{ name: "Europa", imgSrc: "./images/Europa.jpg"},
+{ name: "Ganymede", imgSrc: "./images/Ganymede.jpg"},
+{ name: "Mimas", imgSrc: "./images/Mimas.jpg"},
+{ name: "Titan", imgSrc: "./images/Titan.jpg"},
+{ name: "Callisto", imgSrc: "./images/Callisto.jpg"},
+{ name: "Charon", imgSrc: "./images/Charon.jpg"},
+{ name: "Dione", imgSrc: "./images/Dione.jpg"},
+{ name: "Enceladus", imgSrc: "./images/Enceladus.jpg"},
+{ name: "Europa", imgSrc: "./images/Europa.jpg"},
+{ name: "Ganymede", imgSrc: "./images/Ganymede.jpg"},
+{name: "Mimas", imgSrc: "./images/Mimas.jpg"},
+{ name: "Titan", imgSrc: "./images/Titan.jpg"},
 
 ];
 
@@ -71,12 +39,10 @@ const cardGenerator = () => {
    
    face.src = item.imgSrc;
 
-   selection.appendChild(card);
-   card.appendChild(face);
-   card.appendChild(back);
-
-
-});
+        selection.appendChild(card);
+        card.appendChild(face);
+        card.appendChild(back);
+    });
 };
 
 cardGenerator();
