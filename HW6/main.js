@@ -75,6 +75,9 @@ const timer = setInterval(() => {
   }
 }, 1000);
 
+const correctSound = new Audio("./sounds/correct.mp3");
+const incorrectSound = new Audio("./sounds/incorrect.mp3");
+
 function checkCards() {
   let first_card = document.getElementsByClassName("flip")[0]
   let second_card = document.getElementsByClassName("flip")[1]
@@ -86,14 +89,15 @@ function checkCards() {
     if (first_card.getAttribute("name") == second_card.getAttribute("name")) {
 
       first_card.remove()
-      second_card.remove()
-
+      second_card.remove()     
       document.getElementById("attempt").innerHTML = attempt;
+      correctSound.play();
     }
 
     else {
       first_card.classList.toggle("flip");
       second_card.classList.toggle("flip");
+      incorrectSound.play();
     }
 
   }, 1000)
