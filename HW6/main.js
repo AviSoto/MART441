@@ -95,8 +95,12 @@ function checkCards() {
       first_card.classList.toggle("flip");
       second_card.classList.toggle("flip");
     }
+    
   }, 1000)
   
+  if (attempts ==8){
+    window.location = "page3.html"
+  }
 }
 
 function getInformation() {

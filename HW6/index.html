@@ -16,19 +16,18 @@
    }
   
    function submitForm() {
-           var firstName = document.getElementById("firstName").value;
-           var lastName = document.getElementById("lastName").value;
-           var age = document.getElementById("age").value;
-          
-           var formData = {
-               "firstName": firstName,
-               "lastName": lastName,
-               "age": age
+           var information = {
+            "firstname": " ",
+            "lastname": " ",
+            "age": " ",
+            "attempts": "0"
            };
-          
-           var formDataString = JSON.stringify(formData);
-          
-           console.log(formDataString);
+           information.firstname = document.getElementById("firstName").value;
+           information.lastname = document.getElementById("lastName").value;
+           information.age = document.getElementById("age").value;
+           information.attempts = "0";
+
+           localStorage.setItem("Information", information);
    }
 
    function goNextPage()
