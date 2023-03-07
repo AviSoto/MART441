@@ -1,5 +1,6 @@
 const section = document.querySelector('section');
 let attempt = 0;
+let score = 0;
 
 const cardArray = () => [
   { name: "Callisto", imgSrc: "./images/Callisto.jpg"},
@@ -89,9 +90,10 @@ function checkCards() {
     if (first_card.getAttribute("name") == second_card.getAttribute("name")) {
 
       first_card.remove()
-      second_card.remove()     
+      second_card.remove()
       document.getElementById("attempt").innerHTML = attempt;
       correctSound.play();
+      score += 1;
     }
 
     else {
@@ -99,7 +101,9 @@ function checkCards() {
       second_card.classList.toggle("flip");
       incorrectSound.play();
     }
-
+    if (score == 8) {
+    window.location = "page3.html";
+    }
   }, 1000)
 
 }

@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>End</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="end.css" />
 </head>
-<script>
-    function displayInformation()
-    {
-        var information = {"firstname": "", "lastname":" ", "age":" ", "attempts":" "};
-        document.getElementById("info").innerHTML = information.firstname + information.lastname + information.age + information.attempts;
-        localStorage.getitem(information.firstname);
-
-        console.log(information.firstname[0])
-    }
-</script>
-
-<body>
+<body onload="displayInformation()">
+    <div id="info"></div>
+    <script>
+        function displayInformation() {
+            var information = JSON.parse(localStorage.getItem("information"));
+            document.getElementById("info").innerHTML = "Name: " + information.firstname + " " + information.lastname + "<br/>Age: " + information.age + "<br/>Attempts: " + information.attempts;
+        }
+        function goNextPage() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <br>
+    <button id="btnSubmit" onclick="goNextPage()">Play Again</button>
 </body>
-
 </html>

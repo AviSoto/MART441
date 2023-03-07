@@ -20,14 +20,14 @@
             "firstname": " ",
             "lastname": " ",
             "age": " ",
-            "attempts": "0"
+            "attempts": " ",
            };
            information.firstname = document.getElementById("firstName").value;
            information.lastname = document.getElementById("lastName").value;
            information.age = document.getElementById("age").value;
-           information.attempts = "0";
+           information.attempts = "attempts";
 
-           localStorage.setItem("Information", information);
+           localStorage.setItem("information", JSON.stringify(information));
    }
 
    function goNextPage()
@@ -53,6 +53,7 @@
        <div id="info"></div>
        <br>
        <button id="btnSubmit" onclick="submitForm(); goNextPage();">Play Game</button>
+    
 </body>
 
 </html>
