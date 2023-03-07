@@ -61,3 +61,42 @@ function getInformation() {
   document.getElementById("info").innerHTML = information.firstname + ":" + information.lastname + ":" + information.age;
   localStorage.setItem("information", JSON.stringify(information));
 }
+
+function clicked(card){
+     
+  if(card1==null)
+  {
+      card.className = "show";
+      card1 = card;
+  }
+  else if(card2==null)
+  {
+      card.className = "show";
+      card2 = card;
+     
+      setTimeout("checkMatch();", 1000);
+  }
+}
+
+card1 = null;
+card2 = null;
+
+var matchSound = new Audio ("sounds/correct.mp3");
+var noMatchSound = new Audio ("sounds/incorrect.mp3");
+
+   function clicked(card){
+     
+       if(card1==null)
+       {
+           card.className = "show";
+           card1 = card;
+       }
+       else if(card2==null)
+       {
+           card.className = "show";
+           card2 = card;
+          
+           setTimeout("checkMatch();", 1000);
+       }
+   }
+
