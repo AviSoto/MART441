@@ -46,10 +46,7 @@ const cardGenerator = () => {
     
 
     card.addEventListener("click", function () {
-      
-      //Card check action goes here!
-      
-      // This checks if there are at most two cards flipped, if there are, we don't want to flip any more cards
+     
       if (document.getElementsByClassName("flip").length <= 1) {
         card.classList.toggle("flip");
         if (document.getElementsByClassName("flip").length == 2) {
