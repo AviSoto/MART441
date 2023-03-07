@@ -1,4 +1,5 @@
 const section = document.querySelector('section');
+let score = 0;
 
 const cardArray = () => [
   { name: "Callisto", imgSrc: "./images/Callisto.jpg"},
@@ -35,22 +36,70 @@ const cardGenerator = () => {
     card.classList = "card";
     back.classList = "back";
     face.classList = "face";
-   
+    card.setAttribute("name", item.name);
     back.src = "./images/Blank.jpg";
     face.src = item.imgSrc;
 
     section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
+    
 
     card.addEventListener("click", function () {
-      card.classList.toggle("flip");
+      
+      //Card check action goes here!
+      
+      // This checks if there are at most two cards flipped, if there are, we don't want to flip any more cards
+      if (document.getElementsByClassName("flip").length <= 1) {
+        card.classList.toggle("flip");
+        if (document.getElementsByClassName("flip").length == 2) {
+          // If there are two cards flipped, we want to check if they are the same
+          checkCards();
+        }
+      }
+      else {
+        return
+      }
+      
     });
 
     });
 };
 
 cardGenerator();
+
+function getInformation() {
+  var information = {
+    "firstname": document.getElementById("firstName").value,
+    "lastname": document.getElementById("lastName").value,
+    "age": document.getElementById("age").value
+  };
+  document.getElementById("info").innerHTML = information.firstname + ":" + information.lastname + ":" + information.age;
+  localStorage.setItem("information", JSON.stringify(information));
+}
+
+function checkCards() {
+  let first_card = document.getElementsByClassName("flip")[0]
+  let second_card = document.getElementsByClassName("flip")[1]
+  
+  setTimeout(() => {
+   
+    if (first_card.getAttribute("name") == second_card.getAttribute("name")) {
+      
+      first_card.remove()
+      second_card.remove()
+      
+      score += 1;
+      document.getElementById("score").innerHTML = score;
+    }
+    
+    else {
+      first_card.classList.toggle("flip");
+      second_card.classList.toggle("flip");
+    }
+  }, 1000)
+  
+}
 
 function getInformation() {
   var information = {
