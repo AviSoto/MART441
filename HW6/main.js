@@ -65,6 +65,17 @@ const cardGenerator = () => {
 
 cardGenerator();
 
+let timeLeft = 60;
+
+const timer = setInterval(() => {
+  timeLeft--;
+  document.getElementById("timer").textContent = timeLeft;
+  if (timeLeft == 0) {
+    clearInterval(timer);
+    window.location = "page3.html";
+  }
+}, 1000);
+
 const correctSound = new Audio("./sounds/correct.mp3");
 const incorrectSound = new Audio("./sounds/incorrect.mp3");
 
@@ -95,16 +106,6 @@ function checkCards() {
     window.location = "page3.html";
     }
   }, 1000)
-  
-  let timeLeft = 60;
 
-  const timer = setInterval(() => {
-    timeLeft--;
-    document.getElementById("timer").textContent = timeLeft;
-    if (timeLeft == 0) {
-      clearInterval(timer);
-      window.location = "page3.html";
-    }
-  }, 1000);
 }
 
