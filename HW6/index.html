@@ -20,12 +20,12 @@
             "firstname": " ",
             "lastname": " ",
             "age": " ",
-            "attempts": " ",
+            "attempts": "0"
            };
            information.firstname = document.getElementById("firstName").value;
            information.lastname = document.getElementById("lastName").value;
            information.age = document.getElementById("age").value;
-           information.attempts = "attempts";
+           information.attempts = "0";
 
            localStorage.setItem("information", JSON.stringify(information));
    }

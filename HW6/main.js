@@ -65,17 +65,6 @@ const cardGenerator = () => {
 
 cardGenerator();
 
-let timeLeft = 60;
-
-const timer = setInterval(() => {
-  timeLeft--;
-  document.getElementById("timer").textContent = timeLeft;
-  if (timeLeft == 0) {
-    clearInterval(timer);
-    window.location = "page3.html";
-  }
-}, 1000);
-
 const correctSound = new Audio("./sounds/correct.mp3");
 const incorrectSound = new Audio("./sounds/incorrect.mp3");
 
@@ -84,6 +73,7 @@ function checkCards() {
   let second_card = document.getElementsByClassName("flip")[1]
 
   attempt += 1;
+  
 
   setTimeout(() => {
 
@@ -105,16 +95,16 @@ function checkCards() {
     window.location = "page3.html";
     }
   }, 1000)
+  
+  let timeLeft = 60;
 
+  const timer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timer").textContent = timeLeft;
+    if (timeLeft == 0) {
+      clearInterval(timer);
+      window.location = "page3.html";
+    }
+  }, 1000);
 }
 
-function getInformation() {
- 
-  var information = {
-    "firstname": document.getElementById("firstName").value,
-    "lastname": document.getElementById("lastName").value,
-    "age": document.getElementById("age").value
-  };
-  document.getElementById("info").innerHTML = information.firstname + ":" + information.lastname + ":" + information.age;
-  localStorage.setItem("information", JSON.stringify(information));
-}
