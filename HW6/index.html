@@ -15,10 +15,24 @@
         localStorage.setItem("information", JSON.stringify(information));
     }
     
+    function submitForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var age = document.getElementById("age").value;
+            
+            var formData = {
+                "firstname": firstName,
+                "lastName": email,
+                "age": age
+            };
+            
+            var formDataString = JSON.stringify(formData);
+            
+            console.log(formDataString);
+
     function goNextPage()
     {
         window.location = "page2.html";
-    }
 </script>
 
 <body onload="getInformation();">
@@ -26,16 +40,14 @@
         <br>
 
         <form>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName"><br>
-          
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName"><br>
-          
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age"><br>
-          
-          </form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstname" name="firstname"><br><br>
+        <label for="lastName">Last Name:</label>
+        <input type="lastName" id="lastName" name="lastName"><br><br>
+        <label for="age">Age:</label>
+        <input type="age" id="age" name="age"><br><br>
+    </form>
+
           <script src="./main.js"></script>
           <br>
         <button id="btnSubmit" onclick="goNextPage();">Play Game</button>
