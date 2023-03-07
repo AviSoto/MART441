@@ -1,5 +1,5 @@
 const section = document.querySelector('section');
-let score = 0;
+let attempt = 0;
 
 const cardArray = () => [
   { name: "Callisto", imgSrc: "./images/Callisto.jpg"},
@@ -46,11 +46,11 @@ const cardGenerator = () => {
     
 
     card.addEventListener("click", function () {
-     
+      
       if (document.getElementsByClassName("flip").length <= 1) {
         card.classList.toggle("flip");
         if (document.getElementsByClassName("flip").length == 2) {
-          // If there are two cards flipped, we want to check if they are the same
+
           checkCards();
         }
       }
@@ -78,16 +78,17 @@ function getInformation() {
 function checkCards() {
   let first_card = document.getElementsByClassName("flip")[0]
   let second_card = document.getElementsByClassName("flip")[1]
+
+  attempt += 1;
   
   setTimeout(() => {
    
     if (first_card.getAttribute("name") == second_card.getAttribute("name")) {
       
       first_card.remove()
-      second_card.remove()
+      second_card.removw()
       
-      score += 1;
-      document.getElementById("score").innerHTML = score;
+      document.getElementById("attempt").innerHTML = attempt;
     }
     
     else {

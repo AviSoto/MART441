@@ -1,0 +1,10 @@
+body{
+    background-color:rgb(126, 126, 126);
+    text-align: right;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
