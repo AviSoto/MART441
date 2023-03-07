@@ -1,1 +1,1 @@
-This week I had a lot of troubles. I created a game and had it working but it did not include arrays. I went back over the course as well as watched some videos and was able to start over and create what I have now.
+This week I had a bit of a hard time. I had to really dive deep into resources outside of the course content. I feel proud of what I have done but there is still more that I wish to have accomplished.
