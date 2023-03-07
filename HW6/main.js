@@ -98,7 +98,7 @@ function checkCards() {
     
   }, 1000)
   
-  if (attempts ==8){
+  if (attempt ==8){
     window.location = "page3.html"
   }
 }

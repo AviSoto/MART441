@@ -9,7 +9,7 @@
 <script>
     function displayInformation()
     {
-        var information = {"firstname": "test", "lastname":" ", "age":" ", "attempts":" "};
+        var information = {"firstname": "", "lastname":" ", "age":" ", "attempts":" "};
         document.getElementById("info").innerHTML = information.firstname + information.lastname + information.age + information.attempts;
         localStorage.setItem("information", JSON.stringify(information));
 
