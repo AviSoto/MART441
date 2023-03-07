@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
-    <link rel="stylesheet" href="welcome.css" />
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Welcome</title>
+   <link rel="stylesheet" href="welcome.css" />
 </head>
 <script>
-    function getInformation()
-    {
-        var information = {"firstname": " ", "lastname":" ", "age":" "};
-        document.getElementById("info").innerHTML = information.firstname + ":" + information.lastname + ":" + information.age;
-        localStorage.setItem("information", JSON.stringify(information));
-    }
-    
-    function submitForm() {
-            var firstName = document.getElementById("firstName").value;
-            var lastName = document.getElementById("lastName").value;
-            var age = document.getElementById("age").value;
-            
-            var formData = {
-                "firstname": firstName,
-                "lastName": email,
-                "age": age
-            };
-            
-            var formDataString = JSON.stringify(formData);
-            
-            console.log(formDataString);
+   function getInformation()
+   {
+       var information = {"firstName": " ", "lastName":" ", "age":" "};
+       document.getElementById("info").innerHTML = information.firstName + ":" + information.lastName + ":" + information.age;
+       localStorage.setItem("information", JSON.stringify(information));
+   }
+  
+   function submitForm() {
+           var firstName = document.getElementById("firstName").value;
+           var lastName = document.getElementById("lastName").value;
+           var age = document.getElementById("age").value;
+          
+           var formData = {
+               "firstName": firstName,
+               "lastName": lastName,
+               "age": age
+           };
+          
+           var formDataString = JSON.stringify(formData);
+          
+           console.log(formDataString);
+   }
 
-    function goNextPage()
-    {
-        window.location = "page2.html";
+   function goNextPage()
+   {
+       window.location = "page2.html";
+   }
 </script>
 
 <body onload="getInformation();">
-        <div id="info"></div>
-        <br>
+<form>
+ <label for="firstName">First Name:</label>
+ <input type="text" id="firstName" name="firstName"><br>
 
-        <form>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstname" name="firstname"><br><br>
-        <label for="lastName">Last Name:</label>
-        <input type="lastName" id="lastName" name="lastName"><br><br>
-        <label for="age">Age:</label>
-        <input type="age" id="age" name="age"><br><br>
-    </form>
 
-          <script src="./main.js"></script>
-          <br>
-        <button id="btnSubmit" onclick="goNextPage();">Play Game</button>
+ <label for="lastName">Last Name:</label>
+ <input type="text" id="lastName" name="lastName"><br>
+
+
+ <label for="age">Age:</label>
+ <input type="number" id="age" name="age"><br>
+
+</form>
+       <div id="info"></div>
+       <br>
+       <button id="btnSubmit" onclick="submitForm(); goNextPage();">Play Game</button>
 </body>
+
 </html>
