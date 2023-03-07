@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Moons</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <title>
+        Local Storage
+    </title>
+    <script>
+        function getInformation()
+        {
+            var information = localStorage.getItem("information");
+            document.getElementById("info").innerHTML = "<h1>" + JSON.parse(information).firstname + "</h1>";
+        }
+        
+        function goNextPage()
+        {
+            window.location = "Page1.html";
+        }
+    </script>
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <section></section>
+    <script src="./main.js"></script>
+</body>
+</html>
