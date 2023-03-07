@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>End</title>
+</head>
+<script>
+    function displayInformation()
+    {
+        var information = {"firstname": "test", "lastname":" ", "age":" ", "attempts":" "};
+        document.getElementById("info").innerHTML = information.firstname + information.lastname + information.age + information.attempts;
+        localStorage.setItem("information", JSON.stringify(information));
+    }
+</script>
+
+<body onload="getInformation();">
+</body>
+
+</html>
