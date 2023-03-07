@@ -107,5 +107,16 @@ function checkCards() {
     }
   }, 1000)
 
+  function getInformation() {
+    var information = {
+      "firstname": document.getElementById("firstName").value,
+      "lastname": document.getElementById("lastName").value,
+      "age": document.getElementById("age").value
+    };
+    document.getElementById("info").innerHTML = information.firstname + ":" + information.lastname + ":" + information.age + information.attempt;
+    localStorage.setItem("information", JSON.stringify(information));
+   }
+   
+
 }
 

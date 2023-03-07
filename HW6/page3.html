@@ -12,7 +12,7 @@
     <script>
         function displayInformation() {
             var information = JSON.parse(localStorage.getItem("information"));
-            document.getElementById("info").innerHTML = "Name: " + information.firstname + " " + information.lastname + "<br/>Age: " + information.age + "<br/>Attempts: " + information.attempts;
+            document.getElementById("info").innerHTML = "Name: " + information.firstname + " " + information.lastname + "<br/>Age: " + information.age + "<br/>Attempts: " + information.attempt;
         }
         function goNextPage() {
             window.location.href = "index.html";
