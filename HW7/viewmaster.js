@@ -32,7 +32,7 @@ class ViewMaster {
     new ViewMaster(
       "Cleanup",
       "images/beach.jpg",
-      "A beach cleanup of plastic water bottles, along with a variety of other single use plastics that washed in with the tide",
+      "A beach cleanup of plastic water bottles that washed in with the tide",
       "Brian Yurasits/Unsplash",
       "2019"
     ),
