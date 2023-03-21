@@ -40,3 +40,8 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+ 
+  #intro-image {
+    margin: auto;
+    width: 50%;
+  }
