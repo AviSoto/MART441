@@ -1,0 +1,1 @@
+This assignment was a bit of a refresher on Javascript. I had to utilize some of the tools given to us in the course webpage as well as some YouTube tutorials. It was a lot of trial and error but I am very proud of not only how it functions but how it looks as well. If I had more time I would add more images as well as add different classes of images such as cats or albums.
