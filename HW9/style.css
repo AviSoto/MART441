@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}
+
+.episode {
+  text-align: center;
+}
+
+.thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+body {
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    
+  }
+  .banner {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .banner-text {
+    color: white;
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+  p {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #666;
+  }
