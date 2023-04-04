@@ -14,6 +14,13 @@ $(document).ready(function() {
                 console.log("Found null data.");
             }
         }
-        $(".episode").html(text);
+        $(".note").html(text);
     });
 });
+$(document).ready(function() {
+    $("#myDiv").hover(function() {
+      $(this).css("background-color", "red");
+    }, function() {
+      $(this).css("background-color", "");
+    });
+  });
