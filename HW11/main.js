@@ -40,15 +40,19 @@ class Square {
   }
   
   var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContent('2D');
+  var ctx = canvas.getContext('2d');
+
   var x = 50;
   var y = 50;
-  var x2 = 100;
-  var y2 = 100;
+  var x2 = 300;
+  var y2 = 300;
   var square1;
   var square2;
 
   $(document).ready(function () {
+    square1 = new Square(50, 50, 50, 50, "hotpink");
+    square2 = new Square(100, 100, 50, 50, "purple");
+    
     drawSquare();
     $(this).keypress(function (event) {
       getKey(event);
@@ -56,8 +60,9 @@ class Square {
   });
   
   function drawSquare() {
-    ctx.clearRect(0, 0, 800, 600);
-    square1 = new Square(x, y, 20, 20, "blue");
+    ctx.clearRect(0, 0, 800, 600); 
+    square1.setX(x);
+    square1.setY(y);
     ctx.fillStyle = square1.theColor;
     ctx.fillRect(
       square1.theX,
@@ -66,7 +71,8 @@ class Square {
       square1.theHeight
     );
   
-    square2 = new Square(x2, y2, 50, 50, "green");
+    square2.setX(x2);
+    square2.setY(y2);
     ctx.fillStyle = square2.theColor;
     ctx.fillRect(
       square2.theX,
@@ -76,18 +82,19 @@ class Square {
     );
   }
   
+  
   function moveUp() {
-    y -= 10;
+    y -= 20;
   }
   
   function moveDown() {
-    y += 10;
+    y += 20;
   }
   function moveLeft() {
-    x -= 10;
+    x -= 20;
   }
   function moveRight() {
-    x += 10;
+    x += 20;
   }
   
   function hasCollided(object1, object2) {
@@ -102,7 +109,7 @@ class Square {
   function getKey(event) {
     var didCollide = hasCollided(square1, square2);
     if (didCollide) {
-      window.alert("uhoh!");
+      window.alert("uhoh! you crashed!");
     }
     var char = event.which || event.keyCode;
     var actualLetter = String.fromCharCode(char);
