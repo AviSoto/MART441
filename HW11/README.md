@@ -1,0 +1,1 @@
+This weeks assignment I went into pretty confidently. I had everything working up until the bounding boxes and the changing things during collision. I struggled to get both of those functions working. 
