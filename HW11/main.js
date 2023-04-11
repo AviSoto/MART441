@@ -66,7 +66,7 @@ getBB() {
   $(document).ready(function () {
     square1 = new Square(50, 50, 50, 50, "hotpink");
     square2 = new Square(100, 100, 50, 50, "purple");
-    
+  
     drawSquare();
     $(this).keypress(function (event) {
       getKey(event);
@@ -112,11 +112,13 @@ getBB() {
   }
   
   function hasCollided(object1, object2) {
+    const object1BB = object1.getBB();
+    const object2BB = object2.getBB();
     return !(
-      object1.y + object1.height < object2.y ||
-      object1.y > object2.y + object2.height ||
-      object1.x + object1.width < object2.x ||
-      object1.x > object2.x + object2.width
+      object1BB.y2 < object2BB.y1 ||
+      object1BB.y1 > object2BB.y2 ||
+      object1BB.x2 < object2BB.x1 ||
+      object1BB.x1 > object2BB.x2
     );
   }
   
