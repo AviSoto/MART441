@@ -1,3 +1,9 @@
+function boundingBoxCollision(square1, square2) {
+    const square1BB = square1.getBB();
+    const square2BB = square2.getBB();
+  return square1BB.intersects(square2BB);
+}
+
 class Square {
     constructor(x, y, height, width, color) {
       this.x = x;
@@ -6,7 +12,15 @@ class Square {
       this.width = width;
       this.color = color;
     }
-  
+getBB() {
+        return {
+          x1: this.x,
+          y1: this.y,
+          x2: this.x + this.width,
+          y2: this.y + this.height,
+         };
+       }
+    }
     setX(x) {
       this.x = x;
     }
@@ -122,7 +136,6 @@ class Square {
     } else if (actualLetter == "a") {
       moveLeft();
     }
-  
     drawSquare();
   }
   
