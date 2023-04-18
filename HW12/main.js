@@ -1,7 +1,7 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = 50;
-var y = 200;
+var y = 50;
 const squareSize = 20;
 const scoreboard = document.getElementById("scoreboard");
 scoreboard.innerText = "Score: 0";
@@ -82,7 +82,7 @@ function drawApples() {
             y + squareSize > obstacle.y
         ) {
             x = 50;
-            y = 200;
+            y = 50;
             break;
         }
     }
