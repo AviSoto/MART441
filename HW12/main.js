@@ -72,6 +72,19 @@ function drawPlayer() {
     if (y > canvas.height - squareSize) {
       y = canvas.height - squareSize;
     }
+    for (let obstacle of obstacles) {
+        if (
+          x < obstacle.x + obstacle.width &&
+          x + squareSize > obstacle.x &&
+          y < obstacle.y + obstacle.height &&
+          y + squareSize > obstacle.y
+        ) {
+          // Player collided with obstacle, reset position
+          x = 50;
+          y = 50;
+          break;
+        }
+      }
   }
   
 
