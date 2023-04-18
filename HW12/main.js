@@ -4,6 +4,7 @@ var x = 50;
 var y = 50;
 const squareSize = 20;
 
+
 drawCircle();
 setInterval(update, 1000);
 
@@ -120,12 +121,14 @@ class Obstacle {
   
   async function setup() {
     obstacles = await getObstacles();
+    drawObstacles(); // Call drawObstacles() function here
   }
   
   setup();
   
   function drawObstacles() {
     for (let obstacle of obstacles) {
+      obstacle = new Obstacle(obstacle.x, obstacle.y, obstacle.width, obstacle.height, obstacle.color);
       obstacle.draw();
     }
   }
@@ -136,6 +139,7 @@ class Obstacle {
     drawPlayer();
     drawObstacles();
   }, 100);
+  
   
 
 drawPlayer();
