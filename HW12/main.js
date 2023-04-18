@@ -58,6 +58,19 @@ function drawPlayer() {
     ctx.fillRect(x, y, squareSize, squareSize);
     ctx.fillRect(x, y, squareSize, squareSize);
     ctx.fillRect(x, y, squareSize, squareSize);
+
+    if (x < 0) {
+        x = 0;
+      }
+      if (x > canvas.width - (squareSize * 3)) {
+        x = canvas.width - (squareSize * 3);
+      }
+      if (y < 0) {
+        y = 0;
+      }
+      if (y > canvas.height - squareSize) {
+        y = canvas.height - squareSize;
+      }
 }
 
 setInterval(drawPlayer, 100);
