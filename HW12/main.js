@@ -1,17 +1,13 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = 50;
-var y = 50;
+var y = 200;
 const squareSize = 20;
 const scoreboard = document.getElementById("scoreboard");
 scoreboard.innerText = "Score: 0";
 
 drawCircle();
 setInterval(update, 1000);
-
-function update() {
-  drawCircle();
-}
 
 function drawCircle() {
   ctx.beginPath();
@@ -35,24 +31,18 @@ class Apple {
   }
 }
 
-setInterval(drawApples, 1000);
-
 function drawApples() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let apple of apples) {
       apple.draw();
   
       if (
-        x < apple.x + 20 &&
-        x + squareSize > apple.x &&
-        y < apple.y + 20 &&
-        y + squareSize > apple.y
+        x < apple.x + 10 && x + squareSize > apple.x && y < apple.y + 10 && y + squareSize > apple.y
       ) {
-  
+    
         apple.x = Math.floor(Math.random() * (canvas.width - 20));
         apple.y = Math.floor(Math.random() * (canvas.height - 20));
   
-
+        
         const score = parseInt(scoreboard.innerText.split(": ")[1]);
         scoreboard.innerText = `Score: ${score + 1}`;
       }
@@ -60,43 +50,44 @@ function drawApples() {
   }
   
 
-function drawPlayer() {
+  function drawPlayer() {
     ctx.fillStyle = "green";
     ctx.fillRect(x, y, squareSize, squareSize);
     ctx.fillRect(x - squareSize, y, squareSize, squareSize);
     ctx.fillRect(x - squareSize * 2, y, squareSize, squareSize);
-  
+
     if (x < 0) {
-      x = 0;
+        x = 0;
     }
     if (x > canvas.width - squareSize * 3) {
-      x = canvas.width - squareSize * 3;
+        x = canvas.width - squareSize * 3;
     }
     if (y < 0) {
-      y = 0;
+        y = 0;
     }
     if (y > canvas.height - squareSize) {
-      y = canvas.height - squareSize;
+        y = canvas.height - squareSize;
     }
+
     for (let obstacle of obstacles) {
         if (
-          x < obstacle.x + obstacle.width &&
-          x + squareSize > obstacle.x &&
-          y < obstacle.y + obstacle.height &&
-          y + squareSize > obstacle.y
+            x < obstacle.x + obstacle.width &&
+            x + squareSize > obstacle.x &&
+            y < obstacle.y + obstacle.height &&
+            y + squareSize > obstacle.y
         ) {
-
-          x = 200;
-          y = 200;
-          break;
+            x = 50;
+            y = 200;
+            break;
         }
-      }
-  }
-  
+    }
+}
 
-setInterval(drawPlayer, 100);
+
+setInterval(drawPlayer);
 
 function handleKeyPress(event) {
+    event.preventDefault();
   if (event.keyCode === 37) {
     x -= squareSize;
   }
@@ -109,8 +100,6 @@ function handleKeyPress(event) {
   if (event.keyCode === 40) {
     y += squareSize;
   }
-
-  drawPlayer();
 }
 
 document.addEventListener("keydown", handleKeyPress);
@@ -140,7 +129,6 @@ class Obstacle {
   
   async function setup() {
     obstacles = await getObstacles();
-    drawObstacles();
   }
   
   setup();
@@ -151,36 +139,26 @@ class Obstacle {
       obstacle.draw();
     }
   }
-  
-  const apples = [  new Apple("green", 100, 100),  new Apple("yellow", 200, 200),  new Apple("red", 300, 300)];
 
   setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawApples();
     drawPlayer();
     drawObstacles();
-  }, 100);
-  
-  function drawApples() {
-    for (let apple of apples) {
-      apple.draw();
-    }
-  }
-  
-drawPlayer();
+  }, 5000);
 
 async function getFood() {
   const response = await fetch("apples.json");
   const food = await response.json();
-  console.log(food);
   return food;
 }
 
 async function update() {
-    const apples = await getFood();
-    for (const apple of apples) {
-      const newApple = new Apple(apple.color, apple.x, apple.y);
-      newApple.draw();
+    const newApples = await getFood();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const apple of newApples) {
+      const newAppleObj = new Apple(apple.color, apple.x, apple.y);
+      newAppleObj.draw();
     }
     drawObstacles();
   }
