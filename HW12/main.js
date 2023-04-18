@@ -3,7 +3,8 @@ var ctx = canvas.getContext("2d");
 var x = 50;
 var y = 50;
 const squareSize = 20;
-
+const scoreboard = document.getElementById("scoreboard");
+scoreboard.innerText = "Score: 0";
 
 drawCircle();
 setInterval(update, 1000);
@@ -15,7 +16,7 @@ function update() {
 function drawCircle() {
   ctx.beginPath();
   ctx.arc(x + 10, y + 10, 10, 0, 2 * Math.PI);
-  ctx.fillStyle = "#red";
+  ctx.fillStyle = "red";
   ctx.fill();
 }
 
@@ -34,25 +35,30 @@ class Apple {
   }
 }
 
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-
-let apples = [
-  new Apple("red", 50, 50),
-  new Apple("green", 100, 50),
-  new Apple("yellow", 50, 100),
-  new Apple("orange", 100, 100),
-  new Apple("blue", 150, 50),
-];
-
 setInterval(drawApples, 1000);
 
 function drawApples() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let apple of apples) {
-    apple.draw();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let apple of apples) {
+      apple.draw();
+  
+      if (
+        x < apple.x + 20 &&
+        x + squareSize > apple.x &&
+        y < apple.y + 20 &&
+        y + squareSize > apple.y
+      ) {
+  
+        apple.x = Math.floor(Math.random() * (canvas.width - 20));
+        apple.y = Math.floor(Math.random() * (canvas.height - 20));
+  
+
+        const score = parseInt(scoreboard.innerText.split(": ")[1]);
+        scoreboard.innerText = `Score: ${score + 1}`;
+      }
+    }
   }
-}
+  
 
 function drawPlayer() {
     ctx.fillStyle = "green";
@@ -79,9 +85,9 @@ function drawPlayer() {
           y < obstacle.y + obstacle.height &&
           y + squareSize > obstacle.y
         ) {
-          // Player collided with obstacle, reset position
-          x = 50;
-          y = 50;
+
+          x = 200;
+          y = 200;
           break;
         }
       }
@@ -134,7 +140,7 @@ class Obstacle {
   
   async function setup() {
     obstacles = await getObstacles();
-    drawObstacles(); // Call drawObstacles() function here
+    drawObstacles();
   }
   
   setup();
@@ -146,6 +152,8 @@ class Obstacle {
     }
   }
   
+  const apples = [  new Apple("green", 100, 100),  new Apple("yellow", 200, 200),  new Apple("red", 300, 300)];
+
   setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawApples();
@@ -153,8 +161,12 @@ class Obstacle {
     drawObstacles();
   }, 100);
   
+  function drawApples() {
+    for (let apple of apples) {
+      apple.draw();
+    }
+  }
   
-
 drawPlayer();
 
 async function getFood() {
