@@ -56,22 +56,23 @@ function drawApples() {
 function drawPlayer() {
     ctx.fillStyle = "green";
     ctx.fillRect(x, y, squareSize, squareSize);
-    ctx.fillRect(x, y, squareSize, squareSize);
-    ctx.fillRect(x, y, squareSize, squareSize);
-
+    ctx.fillRect(x - squareSize, y, squareSize, squareSize);
+    ctx.fillRect(x - squareSize * 2, y, squareSize, squareSize);
+  
     if (x < 0) {
-        x = 0;
-      }
-      if (x > canvas.width - (squareSize * 3)) {
-        x = canvas.width - (squareSize * 3);
-      }
-      if (y < 0) {
-        y = 0;
-      }
-      if (y > canvas.height - squareSize) {
-        y = canvas.height - squareSize;
-      }
-}
+      x = 0;
+    }
+    if (x > canvas.width - squareSize * 3) {
+      x = canvas.width - squareSize * 3;
+    }
+    if (y < 0) {
+      y = 0;
+    }
+    if (y > canvas.height - squareSize) {
+      y = canvas.height - squareSize;
+    }
+  }
+  
 
 setInterval(drawPlayer, 100);
 
@@ -94,6 +95,49 @@ function handleKeyPress(event) {
 
 document.addEventListener("keydown", handleKeyPress);
 
+class Obstacle {
+    constructor(x, y, width, height, color) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.color = color;
+    }
+  
+    draw() {
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+  }
+  
+  async function getObstacles() {
+    const response = await fetch("obstacles.json");
+    const obstacles = await response.json();
+    return obstacles.map((obstacle) => new Obstacle(...Object.values(obstacle)));
+  }
+  
+  let obstacles = [];
+  
+  async function setup() {
+    obstacles = await getObstacles();
+  }
+  
+  setup();
+  
+  function drawObstacles() {
+    for (let obstacle of obstacles) {
+      obstacle.draw();
+    }
+  }
+  
+  setInterval(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawApples();
+    drawPlayer();
+    drawObstacles();
+  }, 100);
+  
+
 drawPlayer();
 
 async function getFood() {
@@ -107,6 +151,7 @@ async function update() {
   const apples = await getFood();
   for (const apple of apples) {
     const newApple = new Apple(apple);
-    newApple.drawApple();
+    newApple.drawApples();
   }
+  drawObstacles();
 }
