@@ -112,8 +112,8 @@ class Obstacle {
   
   async function getObstacles() {
     const response = await fetch("obstacles.json");
-    const obstacles = await response.json();
-    return obstacles.map((obstacle) => new Obstacle(...Object.values(obstacle)));
+    const data = await response.json();
+    return data.obstacles;
   }
   
   let obstacles = [];
@@ -148,10 +148,10 @@ async function getFood() {
 }
 
 async function update() {
-  const apples = await getFood();
-  for (const apple of apples) {
-    const newApple = new Apple(apple);
-    newApple.drawApples();
+    const apples = await getFood();
+    for (const apple of apples) {
+      const newApple = new Apple(apple.color, apple.x, apple.y);
+      newApple.draw();
+    }
+    drawObstacles();
   }
-  drawObstacles();
-}
