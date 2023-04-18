@@ -22,21 +22,13 @@ class Apple {
     this.color = color;
     this.x = x;
     this.y = y;
-    this.speed = 2;
   }
 
   draw() {
-    ctx.fillStyle = this.color;
     ctx.beginPath();
     ctx.arc(this.x, this.y, 10, 0, 2 * Math.PI);
+    ctx.fillStyle = this.color;
     ctx.fill();
-  }
-
-  move(player) {
-    if (player.collidesWith(this)) {
-      this.x += this.speed;
-      this.y += this.speed;
-    }
   }
 }
 
@@ -61,31 +53,7 @@ function drawApples() {
   }
 }
 
-  class Player {
-  constructor(x, y, squareSize) {
-    this.x = x;
-    this.y = y;
-    this.squareSize = squareSize;
-  }
-
-  draw() {
-    ctx.fillStyle = "green";
-    ctx.fillRect(this.x, this.y, this.squareSize, this.squareSize);
-    ctx.fillRect(this.x - this.squareSize, this.y, this.squareSize, this.squareSize);
-    ctx.fillRect(this.x - this.squareSize * 2, this.y, this.squareSize, this.squareSize);
-  }
-
-  collidesWith(object) {
-    return (
-      this.x < object.x + object.width &&
-      this.x + this.squareSize > object.x &&
-      this.y < object.y + object.height &&
-      this.y + this.squareSize > object.y
-    );
-  }
-}
-
-const player = new Player(x, y, squareSize);
+  
 
   function drawPlayer() {
     ctx.fillStyle = "green";
@@ -208,38 +176,13 @@ async function setup() {
   await getFood();
 }
 
-let hasCollided = false;
-
 async function update() {
   const newApples = await getFood();
   console.log(newApples);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
   newApples.forEach((apple) => {
     const newAppleObj = new Apple(apple.color, apple.x, apple.y);
-
-    
-    if (player.collidesWith(newAppleObj)) {
-      console.log('Player collided with apple!');
-      hasCollided = true;
-    }
-
-  
-    if (hasCollided) {
-      newAppleObj.move();
-    }
-
     newAppleObj.draw();
-
-    obstacles.forEach((obstacle) => {
-      if (newAppleObj.collidesWith(obstacle)) {
-        console.log('Apple collided with obstacle!');
-        newAppleObj.moveToRandomPosition();
-      }
-    });
   });
-
   drawObstacles();
-
-  requestAnimationFrame(update);
 }
