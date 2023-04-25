@@ -35,8 +35,8 @@ var config = {
 var player;
 var stars;
 var bombs;
-var platforms;
 var spikes;
+var platforms;
 var cursors;
 var score = 0;
 var gameOver = false;
@@ -74,10 +74,9 @@ platforms.create(300, 250, 'ground');
 platforms.create(50, 400, 'ground');
 platforms.create(700, 450, 'ground');
 
-// Set y position of spikes
 spikes.children.iterate(function (child) {
-    child.y -= child.displayHeight/2;
-});
+        child.y -= child.displayHeight/2;
+    });
 
     // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
@@ -121,19 +120,18 @@ spikes.children.iterate(function (child) {
         child.body.gravity.y = Phaser.Math.FloatBetween(100, 500);
     });
     bombs = this.physics.add.group();
-    spikes = this.physics.add.group();
 
     scoreText = this.add.text(400, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
     scoreText.setOrigin(0.5, 0);
+
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
-    this.physics.add.collider(spikes, platforms);
+    this.physics.add.collider(player, spikes);
     this.physics.add.collider(stars, platforms);
     this.physics.add.collider(bombs, platforms);
 
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
-
     this.physics.add.collider(player, spikes, hitSpikes, null, this);
 
 
@@ -196,20 +194,17 @@ function collectStar (player, star)
     }
 }
 
-function hitSpikes (player, spike)
+function hitSpikes(player, spike)
 {
     gameOver = true;
 
-// Stop the player from moving
 player.setTint(0xff0000);
 player.anims.play('turn');
 player.setVelocity(0, 0);
 
-// Show a game over message
 var gameOverText = this.add.text(400, 300, 'Game Over', { fontSize: '64px', fill: '#000' });
 gameOverText.setOrigin(0.5);
 
-// Reload the game after a short delay
 setTimeout(function() {
     location.reload();
 }, 2000);
@@ -229,8 +224,6 @@ function hitBomb (player, bomb)
     gameOver = true;
 
 }
-
-
 
 </script>
 
