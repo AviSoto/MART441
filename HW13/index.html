@@ -72,14 +72,17 @@ spikes = this.physics.add.staticGroup();
 
 spikes.create(750, 110, 'spike').setScale(.5);
 spikes.create(700, 410, 'spike').setScale(.5);
-spikes.create(470, 210, 'spike').setScale(.5);
+spikes.create(460, 210, 'spike').setScale(.5);
 
+// Set y position of spikes
 spikes.children.iterate(function (child) {
     child.y -= child.displayHeight/2;
 });
 
+    // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
 
+    //  Player physics properties. Give the little guy a slight bounce.
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
 
@@ -131,7 +134,7 @@ spikes.children.iterate(function (child) {
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
 
-    this.physics.add.collider(player, bombs, spikes, hitSpike, hitBomb, null, this);
+    this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
 
 function update ()
@@ -199,19 +202,12 @@ function hitBomb (player, bomb)
 
     player.anims.play('turn');
 
-    gameOver = true;
-}
-
-function hitSpike (player, spike)
-{
-    this.physics.pause();
-
-    player.setTint(0xff0000);
-
-    player.anims.play('turn');
+    var gameOverText = this.add.text(400, 330, 'Game Over', { fontSize: '64px', fill: '#000' });
+    gameOverText.setOrigin(0.5);
 
     gameOver = true;
 }
+
 
 </script>
 
