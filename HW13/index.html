@@ -58,6 +58,12 @@ function create ()
 {
     this.add.image(400, 300, 'sky');
 
+spikes = this.physics.add.staticGroup();
+
+spikes.create(750, 110, 'spike').setScale(.5);
+spikes.create(700, 410, 'spike').setScale(.5);
+spikes.create(460, 210, 'spike').setScale(.5);
+
 platforms = this.physics.add.staticGroup();
 
 platforms.create(400, 600, 'ground').setScale(2).refreshBody();
@@ -67,12 +73,6 @@ platforms.create(850, 150, 'ground');
 platforms.create(300, 250, 'ground');
 platforms.create(50, 400, 'ground');
 platforms.create(700, 450, 'ground');
-
-spikes = this.physics.add.staticGroup();
-
-spikes.create(750, 110, 'spike').setScale(.5);
-spikes.create(700, 410, 'spike').setScale(.5);
-spikes.create(460, 210, 'spike').setScale(.5);
 
 // Set y position of spikes
 spikes.children.iterate(function (child) {
@@ -134,8 +134,9 @@ spikes.children.iterate(function (child) {
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
 
-    this.physics.add.collider(player, spikes, bombs, hitBomb, null, this);
-    this.physics.add.overlap(player, spikes, hitSpikes, null, this);
+    this.physics.add.collider(player, spikes, hitSpikes, null, this);
+
+
 }
 
 function update ()
@@ -194,16 +195,26 @@ function collectStar (player, star)
 
     }
 }
-function hitSpike (player, spike)
+
+function hitSpikes (player, spike)
 {
-    this.physics.pause();
-
-    player.setTint(0xff0000);
-
-    player.anims.play('turn');
-
     gameOver = true;
+
+// Stop the player from moving
+player.setTint(0xff0000);
+player.anims.play('turn');
+player.setVelocity(0, 0);
+
+// Show a game over message
+var gameOverText = this.add.text(400, 300, 'Game Over', { fontSize: '64px', fill: '#000' });
+gameOverText.setOrigin(0.5);
+
+// Reload the game after a short delay
+setTimeout(function() {
+    location.reload();
+}, 2000);
 }
+
 function hitBomb (player, bomb)
 {
     this.physics.pause();
@@ -216,6 +227,7 @@ function hitBomb (player, bomb)
     gameOverText.setOrigin(0.5);
 
     gameOver = true;
+
 }
 
 
