@@ -134,7 +134,8 @@ spikes.children.iterate(function (child) {
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
 
-    this.physics.add.collider(player, bombs, hitBomb, null, this);
+    this.physics.add.collider(player, spikes, bombs, hitBomb, null, this);
+    this.physics.add.overlap(player, spikes, hitSpikes, null, this);
 }
 
 function update ()
@@ -193,7 +194,16 @@ function collectStar (player, star)
 
     }
 }
+function hitSpike (player, spike)
+{
+    this.physics.pause();
 
+    player.setTint(0xff0000);
+
+    player.anims.play('turn');
+
+    gameOver = true;
+}
 function hitBomb (player, bomb)
 {
     this.physics.pause();
@@ -207,6 +217,7 @@ function hitBomb (player, bomb)
 
     gameOver = true;
 }
+
 
 
 </script>
