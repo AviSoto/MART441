@@ -50,11 +50,9 @@
 
       var starShape = new THREE.Shape(starPoints);
       
-
-      // Use the shape to create a geometry, extruding it along the z-axis
       var extrudeSettings = { depth: .5, bevelEnabled: false};
       var geometry = new THREE.ExtrudeGeometry(starShape, extrudeSettings);
-geometry.scale(2, 2, 2);
+        geometry.scale(2, 2, 2);
       var material = new THREE.MeshBasicMaterial({
         color: 0x1D3C34
       });
@@ -62,13 +60,47 @@ geometry.scale(2, 2, 2);
       var star = new THREE.Mesh(geometry, material);
       scene.add(star);
 
+      var star2Points = [
+        new THREE.Vector2(0, 1),
+        new THREE.Vector2(0.25, 0.25),
+        new THREE.Vector2(1, 0.25),
+        new THREE.Vector2(0.35, -0.15),
+        new THREE.Vector2(0.5, -1),
+        new THREE.Vector2(0, -0.5),
+        new THREE.Vector2(-0.5, -1),
+        new THREE.Vector2(-0.35, -0.15),
+        new THREE.Vector2(-1, 0.25),
+        new THREE.Vector2(-0.25, 0.25),
+        new THREE.Vector2(0, 1),
+];
+
+var star2Shape = new THREE.Shape(star2Points);
+
+var extrudeSettings2 = { depth: .5, bevelEnabled: false };
+var geometry2 = new THREE.ExtrudeGeometry(star2Shape, extrudeSettings2);
+geometry2.scale(2, 2, 2);
+      var material2 = new THREE.MeshBasicMaterial({
+        color: 0x1D3C34
+      });
+
+var star2 = new THREE.Mesh(geometry2, material2);
+scene.add(star2);
+
       function animate() {
         requestAnimationFrame( animate );
         star.rotation.x += 0.01;
-        star.rotation.y += 0.01;
+        star.rotation.y += 0.05;
+        
+        star2.rotation.x += 0.05;
+        star2.rotation.y += 0.01;
+
         star.position.x = 5;
-star.position.y = 10;
-star.position.z = -15;
+        star.position.y = 10;
+        star.position.z = -15;
+
+        star2.position.x = -5;
+        star2.position.y = -10;
+        star2.position.z = -5;
         
         renderer.render( scene, camera );
       }
