@@ -16,9 +16,9 @@
     <script>
       var scene = new THREE.Scene();
       var camera = new THREE.PerspectiveCamera(
-        45,
+        30,
         window.innerWidth / window.innerHeight,
-        0.1,
+        0.5,
         1000
       );
 
@@ -52,9 +52,9 @@
       
 
       // Use the shape to create a geometry, extruding it along the z-axis
-      var extrudeSettings = { depth: .5, bevelEnabled: false };
+      var extrudeSettings = { depth: .5, bevelEnabled: false};
       var geometry = new THREE.ExtrudeGeometry(starShape, extrudeSettings);
-
+geometry.scale(2, 2, 2);
       var material = new THREE.MeshBasicMaterial({
         color: 0x1D3C34
       });
@@ -66,6 +66,9 @@
         requestAnimationFrame( animate );
         star.rotation.x += 0.01;
         star.rotation.y += 0.01;
+        star.position.x = 5;
+star.position.y = 10;
+star.position.z = -15;
         
         renderer.render( scene, camera );
       }
