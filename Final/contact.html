@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Avianna Soto">
+    <meta name="description" content="About page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page-content">
+      <div class="contact-form">
+        <form id="contact-form" action="">
+          <div class="row">
+            <div class="col-3">
+              <label>Name:</label>
+              <input class="form-item" type="text" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="col-3">
+              <label>Email:</label>
+              <input class="form-item" type="text" id="email" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <label class="textareacomments">Message:</label>
+              <br>
+              <textarea class="form-item" id="message" name="message" cols="80%" rows="5%"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input class="form-btn" type="submit" id="submit" name="submit" value="Submit">
+            </div>
+          </div>
+        </form>
+        <div id="confirmation-message" style="display: none;">
+            Thank you for reaching out! I appreciate your interest and will respond to your request as soon as possible.
+        </div>
+      </div>
+    </div>
+    <script>
+      const contactForm = document.getElementById('contact-form');
+      const confirmationMessage = document.getElementById('confirmation-message');
+
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        contactForm.style.display = 'none';
+        confirmationMessage.style.display = 'block';
+      });
+    </script>
+  </body>
+</html>
