@@ -126,9 +126,11 @@ header {
   /* Styling for the projects section */
   section {
     position: relative;
+    padding-bottom: 2%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
   
-  section::before {
+  section:before {
     content: "";
     position: absolute;
     top: 0;
@@ -141,7 +143,7 @@ header {
     z-index: 1;
   }
   
-  section:hover::before {
+  section:hover:before {
     opacity: 10;
   }
   section img {
@@ -154,9 +156,43 @@ header {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    display: block;
     z-index: 2;
   }
   
   img:hover {
     transform: scale(1.1);
+  }
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #EFE8CB;
+    z-index: 3;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  section:hover img {
+    filter: brightness(20%);
+  }
+  
+  section:hover .image-text {
+    opacity: 1;
+  }
+  
+  .image-text h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+  }
+  
+  .image-text p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
   }
