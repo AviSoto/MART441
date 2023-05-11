@@ -24,7 +24,12 @@ body {
   letter-spacing: 2px;
   white-space: nowrap;
   }
-
+  main {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
   #main_name {
     margin-bottom: 50px;
     padding-top: 90px;
@@ -42,7 +47,6 @@ body {
     margin-bottom: 10px;
     color: #68939F;
     text-align: center;
-    text-shadow: 2px 2px 4px #675364;
     letter-spacing: 2px;
     white-space: nowrap;
   }
@@ -114,7 +118,6 @@ nav a {
     color: #423540;
   }
   
-  /* Media query to adjust the navigation bar on smaller screens */
   @media screen and (max-width: 600px) {
     nav ul {
       flex-direction: column;
@@ -260,7 +263,7 @@ nav a {
     color: #fff;
     text-align: center;
     overflow: hidden;
-    width: 55%;
+    width: 45%;
     border-right: 0.1em solid #fff;
     white-space: nowrap;
     letter-spacing: 0.15em;
@@ -269,12 +272,12 @@ nav a {
   
   @keyframes typing {
     from { width: 0 }
-    to { width: 55% }
+    to { width: 40% }
   }
   
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #fff }
+    40% { border-color: #fff }
   }
   html, body {
     height: 100%;
@@ -284,3 +287,24 @@ nav a {
   #myElement {
     display: none;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vh;
+    width: 100%;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    color: #BB7272;
+    padding: 10px;
+    border: 5px solid #BB7272;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 150px;
+    margin: auto;
+    box-shadow: 1px 1px 2px #423540;
+  }
