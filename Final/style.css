@@ -1,31 +1,89 @@
-body {
-    background-color: #0A2645;
+#full-page-div{
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
   }
 
-  /* Styling for the main section */
-main {
-    margin: 50px auto;
-    max-width: 800px;
-    padding: 0 20px;
+body {
+    background-color: #EF948E;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.5;
+    height: 100%;
   }
   
   h1 {
     font-size: 48px;
-    margin-bottom: 20px;
-    color: #EFE8CB;
+    margin-bottom: 10px;
+    color: #fff;
     text-align: center;
+    text-shadow: 2px 2px 4px #675364;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  }
+
+  #main_name {
+    margin-bottom: 50px;
+    padding-top: 90px;
+  }
+
+  .about {
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  #about-title {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #68939F;
+    text-align: center;
+    text-shadow: 2px 2px 4px #675364;
+    letter-spacing: 2px;
+    white-space: nowrap;
   }
   
   p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col3 {
+    width: 20%;
+    padding: 20px;;
+  }
+
+  .col4 {
+    width: 33%;
+  }
+  
+  .col9 {
+    width: 70%;
+  }
+  
+  .col12 {
+    width: 100%;
   }
 /* navigation */
 
 header {
-    background-color: #0A4D74;
+    background-color: #68939F;
     color: #fff;
     padding: 20px;
+    margin-top: 10px;
+    border-bottom: 3px solid #b3b2b2;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 2px #BB7272;
   }
   
   nav ul {
@@ -40,19 +98,20 @@ header {
     margin: 0 10px;
   }
   
-  nav a {
-    color: #EFE8CB;
-    text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
   
   nav a:hover {
-    background-color: #899E8D;
-    color: #333;
+    background-color: #BB7272;
+    color: #423540;
   }
   
   /* Media query to adjust the navigation bar on smaller screens */
@@ -75,14 +134,13 @@ header {
     justify-content: center;
     margin-top: 100px;
     padding: 30px;
-    background-color: #EFE8CB;
+    background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
   }
   
   .form-item {
-    width: 100%;
     padding: 10px 0;
     background-color: transparent;
     border: none;
@@ -103,7 +161,7 @@ header {
   }
   
   .form-btn {
-    background-color: #0A4D74;
+    background-color: #68939F;
     color: #fff;
     font-size: 20px;
     font-weight: bold;
@@ -116,7 +174,7 @@ header {
   }
   
   .form-btn:hover {
-    background-color: #899E8D;
+    background-color: #BB7272;
   }
   
   label {
@@ -196,3 +254,33 @@ header {
     line-height: 1.4;
     margin: 0;
   }
+  #typing-text {
+    font-size: 20px;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    width: 55%;
+    border-right: 0.1em solid #fff;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    animation: typing 3s steps(50, end), blink-caret 1s step-end infinite;
+}
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 55% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff }
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  padding: 0;
+  }
+  #myElement {
+    display: none;
+}
