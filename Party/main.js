@@ -69,7 +69,7 @@ var questions = [
             },
             {
                 text: "Every day __ children are born with hearing loss, making it the most common congenital condition in the US",
-                answer: "Answer 3.4"
+                answer: "33"
             },
             {
                 text: "What are the Big 9 in Speech Pathology?",
