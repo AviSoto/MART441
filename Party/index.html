@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeopardy Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <br><br>
+  <div id="game-board">
+    <table>
+      <thead>
+        <tr>
+          <th>MISSOULA</th>
+          <th>GONZAGA</th>
+          <th> SLP </th>
+          <th>UM TEAM</th>
+          <th>SPOKANE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="question-0-0" class="question" onclick="showQuestion(0, 0)">$200</td>
+          <td id="question-1-0" class="question" onclick="showQuestion(1, 0)">$200</td>
+          <td id="question-2-0" class="question" onclick="showQuestion(2, 0)">$200</td>
+          <td id="question-3-0" class="question" onclick="showQuestion(3, 0)">$200</td>
+          <td id="question-4-0" class="question" onclick="showQuestion(4, 0)">$200</td>
+        
+        </tr>
+        <tr>
+          <td id="question-0-1" class="question" onclick="showQuestion(0, 1)">$400</td>
+          <td id="question-1-1" class="question" onclick="showQuestion(1, 1)">$400</td>
+          <td id="question-2-1" class="question" onclick="showQuestion(2, 1)">$400</td>
+          <td id="question-3-1" class="question" onclick="showQuestion(3, 1)">$400</td>
+          <td id="question-4-1" class="question" onclick="showQuestion(4, 1)">$400</td>
+          
+        <tr>
+          <td id="question-0-2" class="question" onclick="showQuestion(0, 2)">$600</td>
+          <td id="question-1-2" class="question" onclick="showQuestion(1, 2)">$600</td>
+          <td id="question-2-2" class="question" onclick="showQuestion(2, 2)">$600</td>
+          <td id="question-3-2" class="question" onclick="showQuestion(3, 2)">$600</td>
+          <td id="question-4-2" class="question" onclick="showQuestion(4, 2)">$600</td>
+
+        </tr>
+        <tr>
+          <td id="question-0-3" class="question" onclick="showQuestion(0, 3)">$800</td>
+          <td id="question-1-3" class="question" onclick="showQuestion(1, 3)">$800</td>
+          <td id="question-2-3" class="question" onclick="showQuestion(2, 3)">$800</td>
+          <td id="question-3-3" class="question" onclick="showQuestion(3, 3)">$800</td>
+          <td id="question-4-3" class="question" onclick="showQuestion(4, 3)">$800</td>
+
+        </tr>
+        <tr>
+          <td id="question-0-4" class="question" onclick="showQuestion(0, 4)">$1000</td>
+          <td id="question-1-4" class="question" onclick="showQuestion(1, 4)">$1000</td>
+          <td id="question-2-4" class="question" onclick="showQuestion(2, 4)">$1000</td>
+          <td id="question-3-4" class="question" onclick="showQuestion(3, 4)">$1000</td>
+          <td id="question-4-4" class="question" onclick="showQuestion(4, 4)">$1000</td>
+
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+  <div id="question-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeQuestionModal()">Close</span>
+      <p id="question-text"></p>
+      <button id="show-answer-btn" onclick="showAnswer()">Show Answer</button>
+      <p id="question-answer"></p>
+    </div>
+  </div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
