@@ -38,8 +38,8 @@ var questions = [
                 answer: "football"
             },
             {
-                text: "Over 56 percent of Gonzaga undergraduates study abroad before they graduate.",
-                answer: "Answer 2.3"
+                text: "Over ___ percent of Gonzaga undergraduates study abroad before they graduate.",
+                answer: "56"
             },
             {
                 text: "This is the year that Gonzaga first opened its doors",
